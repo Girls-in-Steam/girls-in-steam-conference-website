@@ -1,6 +1,6 @@
 import React from 'react';
 import './../styles/SimpleTimeline.css';
-import catpic from '../images/catpic.jpg';
+import placeholder from '../images/catpic.jpg';
 
 const ComplicatedTimeline = () => {
   const timelineItems = [
@@ -12,34 +12,33 @@ const ComplicatedTimeline = () => {
     {
       time: '7:00AM',
       title: '@ Large Lecture Hall',
-      content: 'Opening Remarks\n\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.'
+      content: 'Opening remarks\n\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.'
     },
     {
       time: '8:45AM',
       title: '@ Abdul Ladha Science Centre',
-      image: catpic,
-      content: 'Opening Keynote\n\n Speaker: \nFirst Last\nrole @ loc or title\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.',
+      image: placeholder,
+      headerContent: 'Opening Keynote\n\nSpeaker:', // Split into header content
+      content: 'First Last\nrole @ loc or title\n\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.'
     },
     {
       time: '7:45AM',
       title: '@ Abdul Ladha Science Centre',
-      content: 'Panel 1: Science and Engineering\nSpeakers:',
-      //images: [catpic, catpic, catpic, catpic]
+      images: [placeholder, placeholder, placeholder, placeholder], // Use an array for multiple images
+      headerContent: 'Panel 1: Science and Engineering\nSpeakers:', // Split into header content
+      content: 'First Last\nrole @ loc or title\n\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.'
     },
     {
       time: '8:00AM',
       title: '@ Large Lecture Hall',
-      content: 'Panel 1: Science and Engineering'
+      content: 'Lunch'
     },
     {
       time: '8:45AM',
       title: '@ Abdul Ladha Science Centre',
-      content: 'Lunch'
-    },
-    {
-      time: '9:45AM',
-      title: '@ 2 Large Classrooms',
-      content: 'STEAM Workshops Breakout'
+      images: [placeholder, placeholder],
+      headerContent: 'Work Shop Break Out 1',
+      content: 'A description/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.\n Accessible Coding and Web Design: Introduce participants to accessible coding practices and web design principles, emphasizing the importance of creating inclusive digital experiences for all users.\nAccessible App Development: Teach participants how to design and develop mobile apps with accessibility features that cater to users with different needs and abilities.'
     },
     {
       time: '10:45AM',
@@ -48,18 +47,19 @@ const ComplicatedTimeline = () => {
     },
     {
       time: '11:00AM',
-      title: '@ 2 Large Classrooms',
-      content: 'STEAM Workshops Breakout'
+      title: '@ Abdul Ladha Science Centre',
+      images: [placeholder, placeholder,],
+      headerContent: 'Work Shop Break Out 1',
+      content: 'A description/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.\n Accessible Coding and Web Design: Introduce participants to accessible coding practices and web design principles, emphasizing the importance of creating inclusive digital experiences for all users.\nAccessible App Development: Teach participants how to design and develop mobile apps with accessibility features that cater to users with different needs and abilities.'
+    
     },
     {
       time: '12:00PM',
       title: '@ Abdul Ladha Science Centre',
-      content: 'Coffee Break'
-    },
-    {
-      time: '12:15PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Panel 2: Tech & Maths'
+      images: [placeholder, placeholder, placeholder, placeholder], // Use an array for multiple images
+      headerContent: 'Opening Keynote\nSpeakers:', // Split into header content
+      content: 'First Last\nrole @ loc or title\n\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.'
+    
     },
     {
       time: '1:00PM',
@@ -69,7 +69,7 @@ const ComplicatedTimeline = () => {
     {
       time: '1:15PM',
       title: '@ Abdul Ladha Science Centre',
-      content: 'Networking & Mingling'
+      content: 'Networking\n\ndescription/details about the activity, what what will go over, etc. Can be as long or short as want. can be a sentence or a paragraph. what ever works.'
     }
   ];
 
@@ -82,8 +82,21 @@ const ComplicatedTimeline = () => {
             <div className="timeline-time">{item.time}</div>
             <div className="timeline-content">
               <h3>{item.title}</h3>
-              <p>{item.content}</p>
+              {item.headerContent && <p>{item.headerContent}</p>}
               {item.image && <img src={item.image} alt="Timeline event" className="timeline-image" />}
+              {item.images && (
+                <div className="timeline-images-container">
+                  {item.images.map((img, imgIndex) => (
+                    <img 
+                      key={imgIndex} 
+                      src={img} 
+                      alt={`Timeline event ${imgIndex + 1}`} 
+                      className="timeline-image" 
+                    />
+                  ))}
+                </div>
+              )}
+              <p>{item.content}</p>
             </div>
           </div>
         ))}
