@@ -11,7 +11,7 @@ import jaskiran from './../images/jaskiran.png';
 import christabel from './../images/christabel.jpg';
 import nika from './../images/nika.png';
 import allisonduong from './../images/allisonduong.jpeg';
-import bhavneet from './../images/bhavneet.jpg';
+import bhavneet from './../images/bhavneet.png';
 import dhiya from './../images/dhiya.jpeg';
 import nysa from './../images/nysa.png';
 import vanessa from './../images/vanessa.jpg';

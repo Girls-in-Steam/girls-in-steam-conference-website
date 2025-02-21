@@ -75,7 +75,7 @@ export default function Hero() {
           <Button
             onClick={() => {
               console.log('Button clicked');
-              window.open('https://linktr.ee/girlsinsteamorg');
+              window.open('https://forms.gle/W1q8MdD7scvE1T5K9');
             }}
             sx={{
               width: 180,

@@ -7,69 +7,59 @@ import { ImPlus } from 'react-icons/im';
 const SimpleTimeline = () => {
   const timelineItems = [
     {
-      time: '6:00AM - 7:00AM',
-      title: '@ Simple Abdul Ladha Science Centre',
+      time: '8:00AM - 8:30AM',
+      title: '@ Engineering Student Centre',
       content: 'Registration'
     },
     {
-      time: '7:00AM - 7:15AM',
-      title: '@ Large Lecture Hall',
-      content: 'Opening Remarks'
+      time: '8:30AM - 9:30AM',
+      title: '@ Engineering Student Centre',
+      content: 'Opening Ceremony'
     },
     {
-      time: '7:15AM - 7:45AM',
-      title: '@ Abdul Ladha Science Centre',
+      time: '9:00AM - 10:00PM',
+      title: '@ Engineering Student Centre',
       content: 'Opening Keynote'
     },
     {
-      time: '7:45AM - 8:00AM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Coffee Break'
+      time: '10:30AM - 11:00AM',
+      title: '@ TBD',
+      content: 'Breakfast'
     },
     {
-      time: '8:00AM - 8:45AM',
-      title: '@ Large Lecture Hall',
-      content: 'Panel 1: Science and Engineering'
+      time: '11:00AM - 2:30PM',
+      title: '@ TBD',
+      content: 'STEAM Workshop Breakout'
     },
     {
-      time: '8:45AM - 9:45AM',
-      title: '@ Abdul Ladha Science Centre',
+      time: '1:00PM - 2:00 PM',
+      title: '@ TBD',
       content: 'Lunch'
     },
     {
-      time: '9:45AM - 10:45AM',
-      title: '@ 2 Large Classrooms',
-      content: 'STEAM Workshops Breakout'
+      time: '2:30PM - 3:20PM',
+      title: '@ TBD',
+      content: 'Networking & Boothing Session'
     },
     {
-      time: '10:45AM - 11:00AM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Coffee Break'
+      time: '3:20PM - 4:20PM',
+      title: '@ TBD',
+      content: 'STEAM Panels'
     },
     {
-      time: '11:00AM - 12:00 PM',
-      title: '@ 2 Large Classrooms',
-      content: 'STEAM Workshops Breakout'
+      time: '4:20PM - 4:30PM',
+      title: '@ TBD',
+      content: 'Break'
     },
     {
-      time: '12:00PM - 12:15PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Coffee Break'
+      time: '4:30PM - 5:00 PM',
+      title: '@ TBD',
+      content: 'Closing Keynote'
     },
     {
-      time: '12:15PM - 1:00PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Panel 2: Tech & Maths'
-    },
-    {
-      time: '1:00PM - 1:15PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Closing Remarks'
-    },
-    {
-      time: '1:15PM - 2:00PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Networking & Mingling'
+      time: '5:00PM - 5:30PM',
+      title: '@ TBD',
+      content: 'Closing Ceremony'
     }
   ];
 

@@ -9,75 +9,50 @@ import { ImPlus } from 'react-icons/im';
 const ComplicatedTimeline = () => {
   const timelineItems = [
     {
-      time: '6:00AM',
-      title: '@ Complicated Abdul Ladha Science Centre',
+      time: '8:00AM - 8:30AM',
+      title: '@ Engineering Student Centre',
       content: 'Registration'
     },
     {
-      time: '7:00AM',
-      title: '@ Large Lecture Hall',
-      content: 'Opening Remarks',
-      description:
-        'description/details about the activity, what will go over, etc. Can be as long or short as wanted.'
+      time: '8:30AM - 9:00AM',
+      title: '@ Engineering Student Centre',
+      content: 'Opening Ceremony',
+      opendescription:
+        "Join us for innovateHER's Opening Remarks by our Conference Co-Chairs Rachel Ng (she/her), Arnima Singh (she/her), and Founder Ariel Cao (she/her)."
     },
     {
-      time: '8:45AM',
-      title: '@ Abdul Ladha Science Centre',
+      time: '9:00AM - 10:00PM',
+      title: '@ Engineering Student Centre',
       image: placeholder,
       content: 'Opening Keynote',
       speakerdescription:
         'Speaker: First Last\nRole @ loc or title\n\nDescription/details about the activity, what will go over, etc.'
     },
     {
-      time: '7:45AM',
+      time: '1:00AM - 2:30PM',
       title: '@ Abdul Ladha Science Centre',
-      content: 'Panel 1: Science and Engineering\nSpeakers:',
-      images: [placeholder, placeholder, placeholder, placeholder],
-      description: [
-        'First Last\nRole Name\n@company',
-        'Second Last\nRole Name\n@company',
-        'Third Last\nRole Name\n@company',
-        'Fourth Last\nRole Name\n@company'
-      ],
-      workshop:
-        '\ndescription/details about the activity, what will go over, etc. Can be as long or short as wanted.'
+      workshopImages: [placeholder2, placeholder2, placeholder2, placeholder2],
+      content: 'STEAM Workshop Breakout',
+      workshopDescription: [
+        '\nA description/details about the activity, what will go over, etc. Can be as long or short as wanted.',
+        'Accessible Coding and Web Design: Introduce participants to accessible coding practices and web design principles, emphasizing the importance of creating inclusive digital experiences for all users.',
+        'Accessible App Development: Teach participants how to design and develop mobile apps with accessibility features that cater to users with different needs and abilities.'
+      ]
     },
     {
-      time: '8:45AM',
-      title: '@ Abdul Ladha Science Centre',
+      time: '1:00PM - 2:00PM',
+      title: '@ TBD',
       content: 'Lunch'
     },
     {
-      time: '9:45AM',
-      title: '@ Abdul Ladha Science Centre',
-      workshopImages: [placeholder2, placeholder2],
-      content: 'Workshop Breakout 1',
-      workshopDescription: [
-        '\nA description/details about the activity, what will go over, etc. Can be as long or short as wanted.',
-        'Accessible Coding and Web Design: Introduce participants to accessible coding practices and web design principles, emphasizing the importance of creating inclusive digital experiences for all users.',
-        'Accessible App Development: Teach participants how to design and develop mobile apps with accessibility features that cater to users with different needs and abilities.'
-      ]
+      time: '2:30PM - 3:20PM',
+      title: '@ TBD',
+      content: 'Networking & Boothing'
     },
     {
-      time: '10:45AM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Coffee Break'
-    },
-    {
-      time: '11:00AM',
-      title: '@ Abdul Ladha Science Centre',
-      workshopImages: [placeholder2, placeholder2],
-      content: 'Workshop Breakout 2',
-      workshopDescription: [
-        '\nA description/details about the activity, what will go over, etc. Can be as long or short as wanted.',
-        'Accessible Coding and Web Design: Introduce participants to accessible coding practices and web design principles, emphasizing the importance of creating inclusive digital experiences for all users.',
-        'Accessible App Development: Teach participants how to design and develop mobile apps with accessibility features that cater to users with different needs and abilities.'
-      ]
-    },
-    {
-      time: '12:15PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Panel 2: Tech & Maths',
+      time: '3:20PM - 4:20PM',
+      title: '@ TBD',
+      content: 'STEAM Panels:',
       images: [placeholder, placeholder, placeholder, placeholder],
       description: [
         'First Last\nRole Name\n@company',
@@ -89,15 +64,20 @@ const ComplicatedTimeline = () => {
         '\ndescription/details about the activity, what will go over, etc. Can be as long or short as wanted.'
     },
     {
-      time: '1:00PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Closing Remarks'
+      time: '4:20PM - 4:30PM',
+      title: '@ TBD',
+      content: 'Break'
     },
     {
-      time: '1:15PM',
-      title: '@ Abdul Ladha Science Centre',
-      content: 'Networking & Mingling',
-      description: 'Description/details about the activity, what will go over, etc.'
+      time: '4:30PM - 5:00PM',
+      title: '@TBD',
+      content: 'Closing Keynote'
+    },
+    {
+      time: '5:00PM - 5:30PM',
+      title: '@ TBD',
+      content: 'Closing Ceremony',
+      description: 'Thank you to our particpants and sponsors for coming to InnovateHER'
     }
   ];
 
@@ -150,6 +130,7 @@ const ComplicatedTimeline = () => {
             <div className="timeline-content">
               <h3>{item.title}</h3>
               <h4>{item.content}</h4>
+              <h5>{item.opendescription}</h5>
 
               {/* Check for single image */}
               {item.image && (

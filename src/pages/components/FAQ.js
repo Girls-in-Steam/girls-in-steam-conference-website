@@ -98,7 +98,7 @@ export default function FAQ() {
           variant="h4"
           sx={{
             fontWeight: 'bold',
-            marginTop: '30px',
+            marginTop: '25px',
             marginBottom: '10px',
             color: 'white',
             fontSize: { xs: '1.5rem', sm: '2rem' } // Responsive font size

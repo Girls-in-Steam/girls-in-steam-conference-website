@@ -112,6 +112,15 @@ html {
   margin-bottom: 10px; /* Add space between h4 and p */
 }
 
+.timeline-content h5 {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  white-space: pre-wrap;
+  margin-bottom: 10px; /* Add space between h4 and p */
+}
+
 .timeline-content p {
   color: white;
   font-size: 16px;
