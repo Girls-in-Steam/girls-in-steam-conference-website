@@ -62,7 +62,7 @@ export default function SponsorPkg() {
             <div className="pdfcontainer">
               <iframe
                 className="pdf"
-                src="https://drive.google.com/file/d/1etvU2kT8eXdtV2GVbQLPs7k7Ha4jrJuS/preview"
+                src="https://drive.google.com/file/d/1yAUocidSGu05fnW2iRjO4XaJnlYz7QxO/preview"
               />
             </div>
             <a className="sponsorlink" href="mailto:UBC.sponsorship@girlsinsteam.org">

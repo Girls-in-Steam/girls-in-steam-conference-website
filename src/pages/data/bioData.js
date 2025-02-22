@@ -207,7 +207,7 @@ export const bioData = [
     pronouns: PRONOUN_STRINGS.SHEHER,
     location: LOCATION_STRINGS.VANCOUVER,
     emojis: '🫥🛌🏻🍨🎬🎧',
-    desc: 'TBA',
+    desc: 'Nancy is from Edmonton but currently at Vancouver for her undergraduate degree, she is in her first year and aiming for biotech or biochem. She is a talkative, laid back and goal oriented girl. She would love to travel to Iceland one day and go hiking or snorkeling. She enjoys watching a variety of tv shows and movies along with listening to any new music.',
     quote:
       'Girls In Steam is a  organization of many fundamental jobs/areas to build a community with a good quality of life. I feel proud to be able to learn and continue studies/creations that have been passed down for centuries of time.'
   },
