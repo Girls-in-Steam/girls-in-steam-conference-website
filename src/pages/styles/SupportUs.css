@@ -13,13 +13,14 @@
 
 .blurb {
   font-size: 30px;
-  margin: 0;
   color: white;
   text-align: center;
+  margin-right: -110px; /* Adjusts center position */
 }
 
 .SupportSectionContainer {
   margin-bottom: 50px;
+  justify-content: center; 
 }
 
 .SponsorLogos {
@@ -30,15 +31,35 @@
 }
 
 .SponsorLogo {
-  width: 100%; /* Default width for responsive behavior */
+  width: 50%; /* Default width for responsive behavior */
   max-width: 200px; /* Limit maximum width */
   height: auto; /* Maintain aspect ratio */
 }
 
+.SponsorLogoSmartSweet{
+  width: 30%;
+  height:20%;
+}
+
+.SponsorLogoMc{
+  width: 60%;
+  height:auto;
+}
+
+.SponsorLogoSAC{
+  width: 30%;
+  height:30%;
+}
+
+.SponsorLogoDang{
+  width: 25% !important;
+  height:20% !important;
+}
+
 .BoxContainer {
-  width: 100%; /* Ensure the box is responsive */
-  max-width: 900px; /* Limit maximum width */
-  margin: 20px auto;
+  width: 120%; /* Ensure the box is responsive */
+  /*max-width: 900px;  Limit maximum width */
+  margin: 10px auto;
   background-color: #D9D9D9;
   border-radius: 10px;
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
