@@ -12,8 +12,10 @@
 }
 
 .blurb {
-  font-size: 30px;
+  font-size: 27px;
   margin: 0;
+  justify-content: center;
+  width: 100%;
   color: #5A4067;
   text-align: center;
 }
@@ -36,8 +38,8 @@
 }
 
 .BoxContainer {
-  width: 100%; /* Ensure the box is responsive */
-  max-width: 900px; /* Limit maximum width */
+  width: 120%; /* Ensure the box is responsive */
+  /*max-width: 900px;  Limit maximum width */
   margin: 20px auto;
   background-color: #D9D9D9;
   border-radius: 10px;
