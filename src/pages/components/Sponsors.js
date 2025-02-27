@@ -5,6 +5,8 @@ import DangGood from '../images/DangGoodBath-removebg-preview.png';
 import smartSweet from '../images/SS-Logo-Vector_White-230131.png';
 import mc from '../images/McElhanney.png';
 import SAC from '../images/SAC_FINAL-wordmark-colour.png';
+import cima from '../images/CIMA+_logo_slogan_EN_2024_VERTICAL.png';
+import donut from '../images/LD_BRAND_FULL_NODATE_FIN_LRG.png';
 
 export default function Sponsors() {
   return (
@@ -20,6 +22,8 @@ export default function Sponsors() {
               <img src={SAC} alt="Sponsor Logo" className="SponsorLogoSAC" />
               <img src={DangGood} alt="Sponsor Logo" className="SponsorLogoDang" />
               <img src={smartSweet} alt="Sponsor Logo" className="SponsorLogoSmartSweet" />
+              <img src={cima} alt="Sponsor Logo" className="SponsorLogonewsponsors" />
+              <img src={donut} alt="Sponsor Logo" className="SponsorLogonewsponsors" />
             </div>
           </div>
         </Grid>
