@@ -5,7 +5,6 @@ import { FaGear } from 'react-icons/fa6';
 import { ImPlus } from 'react-icons/im';
 import { MdScience } from 'react-icons/md';
 import { PiLineVerticalBold } from 'react-icons/pi';
-import { BiSolidRectangle } from 'react-icons/bi';
 import { FaMousePointer } from 'react-icons/fa';
 import './../styles/Hero.css';
 import mascot from '../images/mascot.png';
@@ -43,8 +42,6 @@ export default function Hero() {
 
         {/* Plus Icon */}
         <ImPlus class="left-plus" />
-        <BiSolidRectangle class="left-taller-rectangle" />
-        <BiSolidRectangle class="left-shorter-rectangle" />
         <FaMousePointer class="mouse-pointer" />
       </div>
 
@@ -124,15 +121,12 @@ export default function Hero() {
 
       <div className="image-container">
         <img src={mascot} alt="mascot" className="mascot-image" />
-        <BiSolidRectangle class="mascot-rectangle" />
         <PiLineVerticalBold class="hanging-line-right" />
         <MdScience class="right-flask" />
         <FaGear class="right-gear" />
 
         {/* Plus Icon */}
         <ImPlus class="right-plus" />
-
-        <BiSolidRectangle class="right-rectangle" />
       </div>
     </div>
   );

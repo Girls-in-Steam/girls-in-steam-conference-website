@@ -25,20 +25,32 @@ html {
 
 .Hero-Background {
   background-image: linear-gradient(#6363AB, #9F9FD6);
-  min-height: 500px;
+  min-height: 200px;
   margin-top: 70px;
 }
 
 .About-Us-Background {
-  background-image: linear-gradient(#9F9FD6, #6363AB, #9F9FD6);
+  background-image: linear-gradient(#5A4D85, #5A4D85, #5A4D85);
   min-height: 200px;
 }
 
 .Agenda-Background {
-  background-image: #6363AB;
+  background: radial-gradient(circle, #6363AB, #5E5E7F, #6363AB);
+  min-height: 200px;
+}
+.KeyNote-Background {
+  background-image: #5E5E7F;
   min-height: 200px;
 }
 
+.Workshop-Background {
+  background-image: #584D7A;
+  min-height: 200px;
+}
+.Panelist-Background {
+  background-image: #5E5E7F;
+  min-height: 200px;
+}
 .Sponsor-FAQ-Team-Background {
   background-image: linear-gradient(#6363AB, #5A4067);
   background-size: 100vw !important;
@@ -57,7 +69,7 @@ html {
   }
 
   .Hero-Background {
-    height: 120vh;
+    height: 100vh;
   }
 
   .Hero-Background,

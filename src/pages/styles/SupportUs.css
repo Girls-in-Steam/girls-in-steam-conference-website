@@ -1,95 +1,77 @@
-#Support {
+/* SupportUs.css */
+
+.SupportUsContainer {
   display: flex;
   justify-content: center;
-  padding: 10%;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
 }
 
 .CenteredGridItem {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-}
-
-.blurb {
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  margin-right: -110px; /* Adjusts center position */
+  align-items: center;
 }
 
 .SupportSectionContainer {
-  margin-bottom: 50px;
-  justify-content: center; 
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
 }
 
-.SponsorLogos {
-  display: flex;
-  flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
-  justify-content: center;
-  gap: 20px; /* Add space between logos */
-}
-
-.SponsorLogo {
-  width: 50%; /* Default width for responsive behavior */
-  max-width: 200px; /* Limit maximum width */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.SponsorLogoSmartSweet{
-  width: 30%;
-  height:20%;
-}
-
-.SponsorLogonewsponsors{
-  width: 40%;
-  height:20%;
-}
-
-.SponsorLogoMc{
-  width: 60%;
-  height:auto;
-}
-
-.SponsorLogoSAC{
-  width: 30%;
-  height:30%;
-}
-
-.SponsorLogoDang{
-  width: 25% !important;
-  height:20% !important;
+.blurb {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .BoxContainer {
-  width: 120%; /* Ensure the box is responsive */
-  /*max-width: 900px;  Limit maximum width */
-  margin: 10px auto;
-  background-color: #D9D9D9;
-  border-radius: 10px;
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap; /* Allow logos to wrap inside the box */
-  justify-content: center; /* Center logos inside the box */
-  gap: 20px; /* Add space between logos */
+  flex-direction: column;
+  gap: 20px; /* Space between rows */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 700px) {
+.LogoRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 logos per row */
+  gap: 20px; /* Space between logos */
+  justify-content: center;
+  align-items: center;
+}
 
-  .BoxContainer {
-    padding: 10px;
+.SponsorLogo {
+  width: 150px; /* Fixed size for all logos */
+  height: 150px; /* Fixed size for all logos */
+  border-radius: 50%; /* Circular shape */
+  object-fit: contain; /* Ensure logos fit nicely */
+  background-color: #fff; /* White background for logos */
+  padding: 10px; /* Padding inside the circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.SponsorLogo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .blurb {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .LogoRow {
+    grid-template-columns: repeat(2, 1fr); /* 2 logos per row on mobile */
+    gap: 10px; /* Reduce gap for mobile */
   }
 
   .SponsorLogo {
-    max-width: 150px; /* Adjust size for smaller logos */
-  }
-}
-
-@media (max-width: 500px) {
-
-  .SponsorLogo {
-    max-width: 120px; /* Smaller size for tight screens */
+    width: 100px; /* Smaller logos for mobile */
+    height: 100px; /* Smaller logos for mobile */
   }
 }
