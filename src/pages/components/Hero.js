@@ -12,6 +12,7 @@ import mascot from '../images/mascot.png';
 export default function Hero() {
   return (
     <div id="Hero">
+      {/* Decorative Elements Container */}
       <div style={{ position: 'relative', width: '80%', height: '50vh', left: '-200px' }}>
         {/* Horizontal Line */}
         <PiLineVerticalBold
@@ -21,30 +22,31 @@ export default function Hero() {
             left: '0px',
             fontSize: '60px',
             opacity: 0.5,
-            transform: 'rotate(90deg) scaleY(12)' // Rotate 90 degrees and scale horizontally
+            transform: 'rotate(90deg) scaleY(12)', // Rotate 90 degrees and scale horizontally
+            zIndex: 1 // Lower than the button
           }}
         />
 
         {/* Vertical Lines */}
-        <PiLineVerticalBold class="hanging-line-left" />
+        <PiLineVerticalBold className="hanging-line-left" style={{ zIndex: 1 }} />
+        <PiLineVerticalBold className="hanging-line-flask" style={{ zIndex: 1 }} />
+        <PiLineVerticalBold className="hanging-line-left-gear" style={{ zIndex: 1 }} />
 
-        <PiLineVerticalBold class="hanging-line-flask" />
-
-        <PiLineVerticalBold class="hanging-line-left-gear" />
-
-        <MdScience class="left-flask" />
+        {/* Flask Icon */}
+        <MdScience className="left-flask" style={{ zIndex: 1 }} />
 
         {/* Large Gear Icon */}
-        <FaGear class="left-large-gear" />
+        <FaGear className="left-large-gear" style={{ zIndex: 1 }} />
 
         {/* Smaller Gear Icon */}
-        <FaGear class="left-small-gear" />
+        <FaGear className="left-small-gear" style={{ zIndex: 1 }} />
 
         {/* Plus Icon */}
-        <ImPlus class="left-plus" />
-        <FaMousePointer class="mouse-pointer" />
+        <ImPlus className="left-plus" style={{ zIndex: 1 }} />
+        <FaMousePointer className="mouse-pointer" style={{ zIndex: 1 }} />
       </div>
 
+      {/* Info Column */}
       <div className="info-column">
         <h2 className="gisConference">
           GIS Conference 2025 <br />
@@ -54,6 +56,7 @@ export default function Hero() {
           <h1 className="her">HER</h1>
         </div>
 
+        {/* Date */}
         <div className="description-container" style={{ display: 'flex', alignItems: 'center' }}>
           <PiCalendarDotsFill
             style={{ marginRight: '8px', verticalAlign: 'middle', color: '#6363AB' }}
@@ -61,6 +64,7 @@ export default function Hero() {
           <h4 className="description">March 29th, 2025</h4>
         </div>
 
+        {/* Location */}
         <div className="description-container" style={{ display: 'flex', alignItems: 'center' }}>
           <TiLocation style={{ marginRight: '8px', verticalAlign: 'middle', color: '#6363AB' }} />
           <h4 className="description" style={{ lineHeight: '1.8' }}>
@@ -68,11 +72,12 @@ export default function Hero() {
           </h4>
         </div>
 
+        {/* Buttons */}
         <Box className="hero-buttons" sx={{ display: 'flex', gap: 2 }}>
           <Button
             onClick={() => {
               console.log('Button clicked');
-              window.open('https://forms.gle/W1q8MdD7scvE1T5K9');
+              window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8');
             }}
             sx={{
               width: 180,
@@ -85,16 +90,17 @@ export default function Hero() {
               fontWeight: 700,
               marginTop: 2,
               boxShadow: '0 0 10px white',
-              zIndex: 2,
+              zIndex: 10, // Higher than decorative elements
               '&:hover': {
                 boxShadow: '0 0 15px white'
               }
             }}
             variant="contained">
-            Notify Me
+            Buy Tickets
           </Button>
           <Button
             onClick={() => {
+              console.log('Button clicked');
               window.location.href = 'mailto:UBC.sponsorship@girlsinsteam.org';
             }}
             sx={{
@@ -108,7 +114,7 @@ export default function Hero() {
               fontWeight: 700,
               marginTop: 2,
               boxShadow: '0 0 10px white',
-              zIndex: 2,
+              zIndex: 10, // Higher than decorative elements
               '&:hover': {
                 boxShadow: '0 0 15px white'
               }
@@ -119,14 +125,15 @@ export default function Hero() {
         </Box>
       </div>
 
+      {/* Image Container */}
       <div className="image-container">
         <img src={mascot} alt="mascot" className="mascot-image" />
-        <PiLineVerticalBold class="hanging-line-right" />
-        <MdScience class="right-flask" />
-        <FaGear class="right-gear" />
+        <PiLineVerticalBold className="hanging-line-right" style={{ zIndex: 1 }} />
+        <MdScience className="right-flask" style={{ zIndex: 1 }} />
+        <FaGear className="right-gear" style={{ zIndex: 1 }} />
 
         {/* Plus Icon */}
-        <ImPlus class="right-plus" />
+        <ImPlus className="right-plus" style={{ zIndex: 1 }} />
       </div>
     </div>
   );

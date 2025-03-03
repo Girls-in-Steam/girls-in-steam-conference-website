@@ -9,6 +9,7 @@
 .agenda-background.expanded {
 min-height: 200px; /* Adjust as needed for the expanded state */
 position: relative; /* Ensure that the icon can be placed relative to the container */
+background: radial-gradient(circle, #5A4D85, #5A4D85, #5A4D85);
 }
 
 .agenda-header {

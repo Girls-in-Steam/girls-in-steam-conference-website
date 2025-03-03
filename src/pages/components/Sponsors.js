@@ -8,7 +8,7 @@ import SAC from '../images/SAC_FINAL-wordmark-colour.png';
 import cima from '../images/CIMA+_logo_slogan_EN_2024_VERTICAL.png';
 import donut from '../images/LD_BRAND_FULL_NODATE_FIN_LRG.png';
 import coastal from '../images/coastal.png';
-import SponsorPkg from './SponsorPkg';
+//import SponsorPkg from './SponsorPkg';
 
 export default function Sponsors() {
   return (
@@ -33,7 +33,10 @@ export default function Sponsors() {
                 <img src={coastal} alt="Sponsor Logo" className="SponsorLogo" />
               </div>
             </div>
-            <SponsorPkg />
+            {/* Centered SponsorPkg */}
+            {/* <div className="SponsorPkgContainer">
+              <SponsorPkg id="sponsor-pkg" />
+            </div> */}
           </div>
         </Grid>
       </Grid>
