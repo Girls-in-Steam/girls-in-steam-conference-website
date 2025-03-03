@@ -4,6 +4,7 @@ import './../styles/AboutUs.css';
 import './../../fonts/JosefinSans-VariableFont_wght.ttf';
 import './../../fonts/Rastano.ttf';
 import { FaGear } from 'react-icons/fa6';
+import { GiSprout } from 'react-icons/gi';
 import robotMascot from '../images/robot-mascot.png';
 
 export default function AboutUs() {
@@ -12,7 +13,15 @@ export default function AboutUs() {
       {/* Grid Layout */}
       <Grid container spacing={2} className="AboutUsContainer">
         {/* Left Section (Text) */}
-        <Grid item id="AboutUsDesc" sm={12} md={6} sx={{ position: 'relative' }}>
+        <Grid
+          item
+          id="AboutUsDesc"
+          sm={12}
+          md={6}
+          sx={{
+            position: 'relative',
+            marginTop: '50px' // Move the entire grid item down
+          }}>
           {/* Gear Icon inside the left text section */}
           <FaGear
             style={{
@@ -93,6 +102,17 @@ export default function AboutUs() {
 
           {/* Robot Mascot Image placed beside and near bottom with tilt */}
           <img src={robotMascot} alt="robotMascot" className="robotMascot-image" />
+          <GiSprout
+            className="sprout"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              right: '20%',
+              fontSize: '350px',
+              color: '#6363AB',
+              zIndex: 1
+            }}
+          />
         </Grid>
       </Grid>
     </div>

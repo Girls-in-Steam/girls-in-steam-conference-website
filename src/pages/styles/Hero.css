@@ -11,12 +11,11 @@
   text-align: left;
   padding-top: 10%;
   padding-bottom: 5%;
-  max-height: 700px;
+  max-height: 100vh;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
   padding-right: 50px;
-  
 }
 
 .description-container {
@@ -24,7 +23,6 @@
   align-items: center;    /* Center vertically */
   margin-top: 10px;      /* Optional: space above the container */
 }
-
 
 .info-column {
   display: flex;                /* Use flexbox */
@@ -35,6 +33,7 @@
   padding-left: 70px;           /* Ensure left padding for alignment */
   padding-top: 30px;
 }
+
 .gisConference, .description, .innovate-her-container {
   text-align: left;  /* Align text to the left for all text elements */
   margin: 0;         /* Remove any default margin that may cause spacing issues */
@@ -46,10 +45,12 @@
   text-align: center;         
   margin: 0 0 10px; /* Add bottom margin to create space below */
 }
+
 .innovate-her-container {
   display: flex;
   align-items: center; /* Vertically centers the elements */
 }
+
 .innovate {
   font-size: 70px;
   margin: 0; /* Remove any margin */
@@ -68,7 +69,6 @@
   opacity: 0.1; /* Make the reflection a bit more transparent */
   filter: blur(2px); /* Add blur to simulate a shadow effect */
 }
-
 
 .her {
   font-size: 70px;
@@ -89,17 +89,18 @@
   filter: blur(2px); /* Add blur to simulate a shadow effect */
 }
 
-
 .description {
   font-size: 25px;  /* Adjust to your desired size */
   font-weight: normal;
   color: #D0CDEA;
   margin: 0;  /* Remove margin to keep spacing consistent */
 }
+
 /* Add gap below STEAM */
 .blurb + .description {
   margin-top: 20px; /* Gap between the last STEAM and descriptions */
 }
+
 .image-container {
   display: flex;
   justify-content: flex-end; /* Align the image to the right */
@@ -129,52 +130,6 @@
   filter: drop-shadow(0 0 20px white);
 }
 
-.mascot-rectangle {
-  position: absolute;
-  top: 170%;
-  right: 70px;
-  font-size: 60px;
-  background: linear-gradient(to right, rgba(99, 99, 171, 1), rgba(99, 99, 171, 0)); /* Fixed gradient syntax */
-  color: transparent; /* Fixed color value */
-  transform: rotate(90deg) scaleX(5) scaleY(4);
-}
-
-.right-rectangle {
-  position: absolute;
-  top: 185%;
-  right: -220px;
-  font-size: 60px;
-  color: #5A4067;
-  transform: rotate(90deg) scaleX(5) scaleY(3);
-  filter: blur(1px); /* Apply blur effect */
-  border-radius: 0; /* Ensure no rounded edges */
-  box-shadow: none; /* Ensure no shadow or blur effect other than the intentional one */
-}
-
-.left-taller-rectangle {
-  position: absolute;
-  top: 335px;
-  left: -20px;
-  font-size: 60px;
-  color: #5A4067;
-  transform: rotate(90deg) scaleX(4) scaleY(6);
-  filter: blur(1px); /* Apply blur effect */
-  border-radius: 0; /* Ensure no rounded edges */
-  box-shadow: none; /* Ensure no shadow or blur effect other than the intentional one */
-}
-
-.left-shorter-rectangle {
-  position: absolute;
-  top: 363px;
-  left: 100px;
-  font-size: 60px;
-  color: #B0A8D8;
-  transform: rotate(90deg) scaleX(3) scaleY(4);
-  filter: blur(1px); /* Apply blur effect */
-  border-radius: 0; /* Ensure no rounded edges */
-  box-shadow: none; /* Ensure no shadow or blur effect other than the intentional one */
-}
-
 .hanging-line-left {
   position: absolute;
   top: 30px;
@@ -183,6 +138,7 @@
   opacity: 0.5;
   transform: scaleY(8);
 }
+
 .left-large-gear {
   position: absolute;
   top: 120px;
@@ -241,8 +197,7 @@
   filter: drop-shadow(0 0 5px white);
 }
 
-/* right side of hero */
-
+/* Right side of hero */
 .hanging-line-right {
   position: absolute;
   top: -40px;
@@ -283,35 +238,34 @@
   transform: rotate(20deg);
 }
 
-
+/* Mobile Styles */
 @media screen and (max-width: 700px) {
   #Hero {
     padding-left: 5%;
     padding-right: 5%;
     flex-direction: column;
-    align-items: center;
     position: relative;
-
+    align-items: center;
   }
 
   .info-column {
     width: 90%; /* Make it take up more width on small screens */
-    margin-top: 20vh; /* Adjust the top margin for mobile */
+    margin-top: -400px; /* Adjust the top margin for mobile */
     margin-left: 50px;
     text-align: center;
-    padding: 10px; /* Add some padding */
-   }
+    padding: 1px; /* Add some padding */
+  }
 
-   .gisConference {
+  .gisConference {
     margin-left: 20px;
-   
-   }
-   .innovate-her-container {
+    margin-top: 20px; /* Move "GIS Conference" closer to the top */
+  }
+
+  .innovate-her-container {
     margin-left: -20px; /* Move the text container to the left */
   }
 
-
-  .innovate{
+  .innovate {
     font-size: 200%;
   }
 
@@ -336,10 +290,11 @@
   }
 
   .mouse-pointer {
-    top: 430px;  /* Adjust position for mobile */
-    left: 35vw;  /* Center it horizontally */
+    top: 65%;  /* Adjust position for mobile */
+    left: 60%;  /* Center it horizontally */
     font-size: 50px;  /* Smaller size on mobile */
   }
+
   .hero-buttons {
     display: flex;
     flex-direction: column; /* Stack buttons vertically on mobile */
@@ -349,95 +304,21 @@
   }
 
   .mascot-image {
-    right: 100px;
-  }
-  .mascot-rectangle {
-    right: 170px;
-  }
- 
-
-  .left-taller-rectangle {
-   top: 880px;
-   left: 30px;
+    right: 5%;
   }
 
-  .left-shorter-rectangle {
-    top: 910px;
-    left: 200px;
-   }
-   .left-large-gear {
-    font-size: 60px;
-    top: 100px;
-  }
-
-  .left-plus {
-    top: -15px;
-    font-size: 30px;
-  }
-  
-  .hanging-line-left-gear {
-    position: absolute;
-    top: -40px;
-    left: 140px;
-    opacity: 0.5;
-    transform: scaleY(1);
-  }
-  
-  .left-small-gear {
-    top: 15px;
-    left: 150px;
-    font-size: 40px;
-  }
-  
+  /* Hide gears on mobile */
+  .left-large-gear,
+  .left-small-gear,
+  .right-gear,
+  .hanging-line-left,
+  .hanging-line-left-gear,
+  .hanging-line-right,
+  .left-plus,
+  .right-plus,
+  .left-flask,
+  .right-flask,
   .hanging-line-flask {
-    position: absolute;
-    top: -30px;
-    left: 120px;
-    font-size: 60px;
-    opacity: 0.5;
-    transform: scaleY(6);
+    display: none;
   }
-  
-  .hanging-line-left {
-    top: -40px;
-    left: 100px;
-  }
-
-  .left-flask { 
-    top: 140px;
-    left: 135px;
-    font-size: 40px;
-  
-  }
-  
-  
-  /* mobile-right*/
-  .right-rectangle {
-    top: 310px;
-    right: -60px;
-  }
-   .hanging-line-right {
-    top: -550px;
-    left: 345px;
-    transform: scaleY(1) scaleX(1);
-  }
-  .right-gear {
-    font-size: 50px;
-    top: -500px;
-    right: 1px;
-  }
-
-  .right-flask {
-    top: -590px;
-    right: 50px;
-  }
-  
-  .right-plus {
-    top: -470px;
-    right: 90px;
-  }
-
-
 }
-
-

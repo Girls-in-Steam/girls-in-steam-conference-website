@@ -8,6 +8,9 @@ import Hero from './components/Hero.js';
 import Sponsors from './components/Sponsors.js';
 import FAQ from './components/FAQ.js';
 import Agenda from './components/Agenda.js';
+import Workshop from './components/Workshop.js';
+import Panelist from './components/Panelist.js';
+import KeyNote from './components/KeyNote.js';
 
 export default function Home() {
   return (
@@ -28,26 +31,37 @@ export default function Home() {
         </div>
       </div>
       <div className="Agenda-Background" id="Agenda">
-        {' '}
-        {/* Add the 'id' here */}
         <div className="App-Component">
           <Agenda />
         </div>
       </div>
+      {/* Add KeyNote Section */}
+      <div className="KeyNote-Background" id="KeyNote">
+        <div className="KeyNote-Component">
+          <KeyNote />
+        </div>
+      </div>
+
+      <div className="Workshop-Background" id="KeyNote">
+        <div className="Workshop-Component">
+          <Workshop />
+        </div>
+      </div>
+
+      <div className="Panelist-Background" id="Panelist">
+        <div className="Panelist-Component">
+          <Panelist />
+        </div>
+      </div>
+
       <div className="Sponsor-FAQ-Team-Background">
         <div className="App-Component" id="Sponsors">
-          {' '}
-          {/* Add 'id' here */}
           <Sponsors />
         </div>
         <div className="App-Component" id="FAQ">
-          {' '}
-          {/* Add 'id' here */}
           <FAQ />
         </div>
         <div className="App-Component" id="TheTeam">
-          {' '}
-          {/* Add 'id' here */}
           <TheTeam />
         </div>
       </div>

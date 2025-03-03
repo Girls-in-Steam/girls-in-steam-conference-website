@@ -1,108 +1,76 @@
 @font-face {
-    font-family: 'Josefin Sans';
-    src: local('JosefinSans'),
-         url('./../../fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Josefin Sans';
+  src: local('JosefinSans'),
+       url('./../../fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
 }
 
 /* Agenda.css */
-  
+
 .agenda-background.expanded {
-  min-height: 200px; /* Adjust as needed for the expanded state */
-  position: relative; /* Ensure that the icon can be placed relative to the container */
+min-height: 200px; /* Adjust as needed for the expanded state */
+position: relative; /* Ensure that the icon can be placed relative to the container */
 }
 
 .agenda-header {
-  display: flex;                /* Use flexbox for layout */
-  justify-content: center;      /* Center horizontally */
-  align-items: center;          /* Center vertically */
-  color: #E8C3D1;
-  width: 100%;                  /* Ensure the container takes full width */
-  text-align: center;           /* Center the text horizontally */
+display: flex;                /* Use flexbox for layout */
+justify-content: center;      /* Center horizontally */
+align-items: center;          /* Center vertically */
+color: #E8C3D1;
+width: 100%;                  /* Ensure the container takes full width */
+text-align: center;           /* Center the text horizontally */
 }  
 
 .schedule-content {
-  margin-top: 10px;
-  padding: 8px;
-  transition: max-height 0.3s ease-in-out;
-  background-color: #6363AB ;
-  position: relative;
-  z-index: 2; /* Ensure content is above the icon */
+margin-top: 10px;
+padding: 8px;
+transition: max-height 0.3s ease-in-out;
+background-color: #6363AB ;
+position: relative;
+z-index: 2; /* Ensure content is above the icon */
 }
 
 .custom-toggle-button {
-  border: none;
-  font-size: 3rem;
-  padding: 8px 16px;
-  background-color: transparent; /* Ensure background is transparent */
-  color: #E8C3D1; /* Arrow is white in both states */
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smooth expand effect */
-  box-shadow: none; /* Remove any box shadow */
+border: none;
+font-size: 3rem;
+padding: 8px 16px;
+background-color: transparent; /* Ensure background is transparent */
+color: #E8C3D1; /* Arrow is white in both states */
+transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smooth expand effect */
+box-shadow: none; /* Remove any box shadow */
 }
 
 /* Remove the default hover effect */
 .custom-toggle-button:hover {
-  background-color: transparent; /* Ensures no background color on hover */
-  border: none;
-  box-shadow: none;
+background-color: transparent; /* Ensures no background color on hover */
+border: none;
+box-shadow: none;
 }
 
 /* Ensure no shadow or background when selected */
 .custom-toggle-button.Mui-selected {
-  background-color: transparent; /* Keep background transparent when selected */
-  box-shadow: none; /* Remove any box shadow when selected */
-  border: none;
+background-color: transparent; /* Keep background transparent when selected */
+box-shadow: none; /* Remove any box shadow when selected */
+border: none;
 }
 
-/* Style the arrow icon */
-.arrow-icon {
-  font-size: 10rem;
-  padding: 8px 16px;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  color: #E8C3D1; /* Arrow is white in both states */
-  transition: transform 0.2s ease-in-out; /* Smooth expand effect */
-}
-
-/* Hover effect to expand the arrow slightly */
-.custom-toggle-button:hover .arrow-icon {
-  border: none;
-  transform: scale(1.2); /* Expands slightly on hover */
-}
-
-/* Ensure that the ToggleButton has no border */
-.MuiToggleButton-root {
-  border: none !important; /* Override any default border styles */
-  background-color: transparent !important; /* Maintain transparency */
-}
-
-/* Ensure your custom toggle button styles are applied */
-.custom-toggle-button {
-  padding: 0; /* You can adjust this as needed */
-  box-shadow: none; /* Remove any box shadow if needed */
-}
 
 /* Style for the MdScience Icon */
 .md-science-icon {
-  position: absolute;
-  top: 330%;
-  left: 30%;
-  transform: translate(-50%, -50%) rotate(-30deg); /* Center and rotate the icon */
-  font-size: 200px; /* Increase the size of the icon */
-  color: rgba(0, 0, 0, 0.1); /* Semi-transparent color */
-  z-index: 100; /* Ensure it stays behind the content */
-  pointer-events: none; /* Prevent interaction with the icon */
+position: absolute;
+top: 330%;
+left: 30%;
+transform: translate(-50%, -50%) rotate(-30deg); /* Center and rotate the icon */
+font-size: 200px; /* Increase the size of the icon */
+color: rgba(0, 0, 0, 0.1); /* Semi-transparent color */
+z-index: 100; /* Ensure it stays behind the content */
+pointer-events: none; /* Prevent interaction with the icon */
 }
 
 @media (max-width: 767px) {
-  .agenda-background {
-    padding: 15px;
-    margin: 10px;
-  }
+.agenda-background {
+  padding: 15px;
+  margin: 10px;
+}
 
-  .custom-toggle-button {
-    align-self: flex-end;
-    margin-top: 10px;
-  }
 
 }
