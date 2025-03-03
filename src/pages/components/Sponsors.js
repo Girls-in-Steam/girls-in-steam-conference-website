@@ -16,7 +16,7 @@ export default function Sponsors() {
       <Grid container spacing={2} className="SupportUsContainer">
         <Grid item xs={12} className="CenteredGridItem">
           <div className="SupportSectionContainer">
-            <h1 className="blurb">THANK YOU SO MUCH TO OUR SPONSORS</h1>
+            <h1 className="blurb">THANK YOU TO OUR SPONSORS</h1>
             <div className="BoxContainer">
               {/* Top Row: First 4 Logos */}
               <div className="LogoRow">
