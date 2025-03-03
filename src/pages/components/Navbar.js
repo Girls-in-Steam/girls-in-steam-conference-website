@@ -101,7 +101,7 @@ export default function ButtonAppBar() {
               backgroundColor: 'white',
               textAlign: 'center'
             }}>
-            Notify Me
+            Buy Tickets
           </MenuItem>
         </Menu>
 
@@ -133,7 +133,9 @@ export default function ButtonAppBar() {
             </Button>
           ))}
           <Button
-            onClick={() => window.open('https://linktr.ee/girlsinsteamorg', '_blank')}
+            onClick={() =>
+              window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8', '_blank')
+            }
             sx={{
               backgroundColor: '#7D5390',
               color: 'white',
@@ -143,7 +145,7 @@ export default function ButtonAppBar() {
               '&:hover': { boxShadow: '0 0 15px white' }
             }}
             variant="contained">
-            Notify Me
+            Buy Tickets
           </Button>
         </div>
       </Toolbar>

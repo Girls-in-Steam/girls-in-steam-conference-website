@@ -12,8 +12,7 @@ export default function Agenda() {
         flexDirection: 'column',
         alignItems: 'center', // Center the entire agenda horizontally
         justifyContent: 'center', // Center the entire agenda vertically
-        minHeight: '100vh', // Ensure the component takes up the full viewport height
-        backgroundColor: 'radial-gradient(circle, #6363AB, #5E5E7F, #6363AB)' // Add background gradient
+        minHeight: '100vh'
       }}>
       {/* Agenda Title */}
       <Typography

@@ -1,7 +1,7 @@
-SponsorPkg {
+#SponsorPkg {
   overflow: hidden;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
 }
 
 dialog:modal {
@@ -20,14 +20,6 @@ dialog:modal {
   z-index: 2000;
 }
 
-.blurb {
-  font-size: 30px;
-  margin: 0;
-  color: white;
-  text-align: center;
-  font-family: 'Josefin Sans';
-}
-
 .pkgContainer {
   width: 100vw;
   height: 100vh;
@@ -37,6 +29,17 @@ dialog:modal {
   align-items: center;
   padding-top: 50px;
   padding-bottom: 30px;
+  position: relative; /* For positioning the close button */
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  z-index: 1000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .mainpart {
@@ -72,10 +75,6 @@ dialog:modal {
 }
 
 @media only screen and (max-width: 1000px) {
-  .blurb {
-    font-size: 18px;
-  }
-
   .pdfcontainer {
     width: 90%;
     height: 90%;

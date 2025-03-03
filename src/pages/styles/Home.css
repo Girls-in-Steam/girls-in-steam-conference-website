@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 #App {
   text-align: center;
   background-color: #6363AB;
@@ -30,12 +35,12 @@ html {
 }
 
 .About-Us-Background {
-  background-image: linear-gradient(#5A4D85, #5A4D85, #5A4D85);
+  background-image: linear-gradient(#9F9FD6, #5A4D85, #5A4D85);
   min-height: 200px;
 }
 
 .Agenda-Background {
-  background: radial-gradient(circle, #6363AB, #5E5E7F, #6363AB);
+  background-image: linear-gradient(#5A4D85, #6363AB);
   min-height: 200px;
 }
 .KeyNote-Background {
@@ -53,7 +58,7 @@ html {
 }
 .Sponsor-FAQ-Team-Background {
   background-image: linear-gradient(#6363AB, #5A4067);
-  background-size: 100vw !important;
+  min-height: 200px;
 }
 
 /* Responsive Adjustments */

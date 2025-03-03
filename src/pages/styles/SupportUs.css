@@ -23,7 +23,7 @@
 .blurb {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #E8C3D1;
   margin-bottom: 20px;
 }
 
@@ -55,8 +55,17 @@
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
+
 .SponsorLogo:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.SponsorPkgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 /* Mobile Responsiveness */
