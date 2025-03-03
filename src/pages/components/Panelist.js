@@ -1,13 +1,18 @@
 import React from 'react';
 import { Typography, Box, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
+//science
 import DrAnnale from '../images/Dr.AnnaleeYassi.png';
 import AshianaSunderji from '../images/AshianaSunderji.jpeg';
+import CloverLee from '../images/CloverLee.jpg';
+//enginnering
 import ArielleMurad from '../images/ArielleMurad.jpg';
+//arts
 import JulianneNieh from '../images/JulianneNieh.jpg';
 import BonnieLu from '../images/BonnieLu.jpeg';
 import TiffanyPotter from '../images/TiffanyPotter.jpeg';
 import KinwaBluesky from '../images/KinwaBluesky.jpeg';
+import JinLee from '../images/JinLee.png';
 
 //maths
 import AnaMucalica from '../images/AnaMucalica.jpg';
@@ -168,8 +173,8 @@ export default function Panelists() {
     {
       name: 'Clover Lee (They/Them)',
       role: 'Research Assistant, Public Health and Urban Nutrition Research Group, The University of British Columbia',
-      linkedinUrl: 'https://www.linkedin.com/in/alexjohnson/',
-      imageUrl: 'https://www.linkedin.com/in/clover-lee/',
+      linkedinUrl: 'https://www.linkedin.com/in/clover-lee/?originalSubdomain=ca',
+      imageUrl: CloverLee,
       focusArea:
         'Critical public health nutrition and food anthropology from social justice perspectives'
     },
@@ -178,7 +183,7 @@ export default function Panelists() {
       role: 'Placeholder',
       linkedinUrl: 'https://www.linkedin.com/in/emilybrown/',
       imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'Placeholder'
+      focusArea: 'tbd'
     }
   ];
 
@@ -274,7 +279,7 @@ export default function Panelists() {
       name: 'Jin Lee (She/Her)',
       role: 'Product Manager @ SAP',
       linkedinUrl: 'https://www.linkedin.com/in/jin-leebc/',
-      imageUrl: 'https://via.placeholder.com/100',
+      imageUrl: JinLee,
       focusArea: 'COGS + AI Safety Research'
     },
     {

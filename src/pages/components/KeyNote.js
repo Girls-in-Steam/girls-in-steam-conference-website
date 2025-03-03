@@ -21,7 +21,7 @@ export default function KeyNote() {
           fontWeight: 'bold',
           marginBottom: '20px'
         }}>
-        Keynote
+        KEYNOTE
       </Typography>
       <Box
         sx={{

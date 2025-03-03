@@ -3,8 +3,6 @@ import { Typography, Box, IconButton, useMediaQuery, useTheme } from '@mui/mater
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
 
 // Import all images
-import DrAnnale from '../images/Dr.AnnaleeYassi.png';
-import AshianaSunderji from '../images/AshianaSunderji.jpeg';
 import Flavia from '../images/Flavia.jpg';
 
 export default function Workshop() {
@@ -20,7 +18,7 @@ export default function Workshop() {
       organization: 'placeholder',
       linkedin: 'https://spph.ubc.ca/faculty/professors/annalee-yassi/',
       keyFocus: 'placeholder',
-      image: DrAnnale // Use the imported image
+      image: 'tbd' // Use the imported image
     },
     {
       type: 'Science',
@@ -29,7 +27,7 @@ export default function Workshop() {
       organization: 'placeholder',
       linkedin: 'https://www.linkedin.com/in/ashiana-sunderji-58715b1b5 ',
       keyFocus: 'placeholder',
-      image: AshianaSunderji // Use the imported image
+      image: 'tbd' // Use the imported image
     },
     {
       type: 'Technology',
@@ -38,7 +36,7 @@ export default function Workshop() {
       organization: 'placeholder',
       linkedin: 'https://www.linkedin.com/in/alicejohnson',
       keyFocus: 'placeholder',
-      image: DrAnnale // Use the imported image
+      image: 'tbd' // Use the imported image
     },
     {
       type: 'Technology',
@@ -47,25 +45,25 @@ export default function Workshop() {
       organization: 'placeholder',
       linkedin: 'https://www.linkedin.com/in/bobbrown',
       keyFocus: 'placeholder',
-      image: DrAnnale // Use the imported image
+      image: 'tbd' // Use the imported image
     },
     {
       type: 'Engineering',
-      title: 'Charlie Davis',
-      role: 'Mechanical Engineer',
-      organization: 'Build It',
+      title: 'tbd',
+      role: 'tbd',
+      organization: 'tbd',
       linkedin: 'https://www.linkedin.com/in/charliedavis',
-      keyFocus: 'Robotics',
-      image: DrAnnale // Use the imported image
+      keyFocus: 'tbd',
+      image: 'tbd' // Use the imported image
     },
     {
       type: 'Engineering',
-      title: 'Diana Evans',
-      role: 'Civil Engineer',
-      organization: 'Construct Ltd',
+      title: 'tbd',
+      role: 'tbd',
+      organization: 'tbd',
       linkedin: 'https://www.linkedin.com/in/dianaevans',
-      keyFocus: 'Sustainable Design',
-      image: DrAnnale // Use the imported image
+      keyFocus: 'tbd',
+      image: 'tbd' // Use the imported image
     },
     {
       type: 'Arts and Math',
@@ -83,7 +81,7 @@ export default function Workshop() {
       organization: 'Creative Studio',
       linkedin: 'https://www.linkedin.com/in/frankharris',
       keyFocus: 'placeholder',
-      image: DrAnnale // Use the imported image
+      image: 'tbd' // Use the imported image
     }
   ];
 
@@ -123,7 +121,7 @@ export default function Workshop() {
         variant={isMobile ? 'h4' : 'h3'} // Adjust font size for mobile
         sx={{
           textAlign: 'center',
-          color: '#fff',
+          color: '#E8C3D1',
           fontFamily: 'Josefin Sans',
           fontWeight: 'bold',
           marginBottom: '20px'
@@ -223,18 +221,6 @@ export default function Workshop() {
                         alignItems: 'center', // Center the image and text
                         position: 'relative' // For the vertical line
                       }}>
-                      {/* Vertical White Line */}
-                      <Box
-                        sx={{
-                          position: 'absolute',
-                          left: 0,
-                          top: 0,
-                          bottom: 0,
-                          width: '4px',
-                          backgroundColor: '#FFF',
-                          borderRadius: '2px'
-                        }}
-                      />
                       {/* Circular Photo */}
                       <Box
                         sx={{
