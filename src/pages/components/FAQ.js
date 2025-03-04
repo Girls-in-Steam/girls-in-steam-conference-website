@@ -28,7 +28,7 @@ const AccordionItem = ({ question, answer }) => {
           expandIcon={
             <ExpandMoreIcon
               sx={{
-                color: 'white',
+                color: '#D0CDEA',
                 fontSize: '36px',
                 marginRight: '0',
                 padding: '0'
@@ -45,7 +45,7 @@ const AccordionItem = ({ question, answer }) => {
             sx={{
               textAlign: 'left',
               fontWeight: 'bold',
-              color: 'white',
+              color: '#D0CDEA',
               marginLeft: '0',
               fontFamily: 'Josefin Sans',
               overflow: 'visible',
@@ -59,7 +59,7 @@ const AccordionItem = ({ question, answer }) => {
                 margin: '0 0',
                 marginTop: '8px',
                 marginRight: '10px',
-                borderBottom: '1px solid white'
+                borderBottom: '1px solid #D0CDEA'
               }}
             />
           </Typography>
@@ -75,7 +75,7 @@ const AccordionItem = ({ question, answer }) => {
             variant="h6"
             sx={{
               textAlign: 'left',
-              color: 'white',
+              color: '#D0CDEA',
               fontWeight: 'medium',
               marginBottom: '70px',
               marginLeft: '-16px',
@@ -100,8 +100,9 @@ export default function FAQ() {
             fontWeight: 'bold',
             marginTop: '25px',
             marginBottom: '10px',
-            color: 'white',
-            fontSize: { xs: '1.5rem', sm: '2rem' } // Responsive font size
+            color: '#E8C3D1',
+            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
+            // fontSize: { xs: '1.5rem', sm: '2rem' } // Responsive font size
           }}>
           FREQUENTLY ASKED QUESTIONS
         </Typography>

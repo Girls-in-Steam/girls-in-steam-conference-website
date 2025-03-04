@@ -36,7 +36,7 @@ export default function ButtonAppBar() {
         left: 0,
         right: 0,
         zIndex: 1000,
-        backgroundColor: '#5f4e95',
+        backgroundColor: 'hsl(257, 34.20%, 47.60%)',
         width: '100%',
         boxSizing: 'border-box'
       }}>

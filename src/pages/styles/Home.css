@@ -2,14 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body, html {
+body,
+html {
   width: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #App {
   text-align: center;
-  background-color: #6363AB;
+  background-color: #6363ab;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,36 +30,41 @@ body, html {
 }
 
 .Hero-Background {
-  background-image: linear-gradient(#6363AB, #9F9FD6);
+  background-image: linear-gradient(rgba(109, 88, 174, 0.75), #6363ab, #776aa2);
+  /* bg: #9f9fd6 */
   min-height: 200px;
   margin-top: 70px;
 }
 
 .About-Us-Background {
-  background-image: linear-gradient(#9F9FD6, #5A4D85, #5A4D85);
+  background: #5a4d85;
+  /* background-image: linear-gradient(#9F9FD6, #5A4D85, #5A4D85); */
   min-height: 200px;
 }
 
 .Agenda-Background {
-  background-image: linear-gradient(#5A4D85, #6363AB);
+  background-image: linear-gradient(#5a4d85, #6363ab);
   min-height: 200px;
 }
 .KeyNote-Background {
-  background-image: #5E5E7F;
+  background-image: #5e5e7f;
   min-height: 200px;
 }
 
 .Workshop-Background {
-  background-image: #584D7A;
+  background-image: #584d7a;
   min-height: 200px;
 }
 .Panelist-Background {
-  background-image: #5E5E7F;
+  background-image: #5e5e7f;
   min-height: 200px;
 }
 .Sponsor-FAQ-Team-Background {
-  background-image: linear-gradient(#6363AB, #5A4067);
+  background-image: linear-gradient(#6363ab, #5a4067);
   min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Responsive Adjustments */

@@ -6,7 +6,7 @@
 }
 
 #Hero {
-  color: #EDE9EA;
+  color: #ede9ea;
   font-family: 'Josefin Sans';
   text-align: left;
   padding-top: 10%;
@@ -19,30 +19,32 @@
 }
 
 .description-container {
-  display: flex;          /* Use flexbox for alignment */
-  align-items: center;    /* Center vertically */
-  margin-top: 10px;      /* Optional: space above the container */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  margin-top: 10px; /* Optional: space above the container */
 }
 
 .info-column {
-  display: flex;                /* Use flexbox */
-  flex-direction: column;       /* Stack items vertically */
-  justify-content: flex-start;  /* Align items to the start of the container */
-  align-items: flex-start;      /* Align items to the left (or change to center) */
-  height: 100%;                 /* Ensure it takes full height of the parent */
-  padding-left: 70px;           /* Ensure left padding for alignment */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the start of the container */
+  align-items: flex-start; /* Align items to the left (or change to center) */
+  height: 100%; /* Ensure it takes full height of the parent */
+  padding-left: 70px; /* Ensure left padding for alignment */
   padding-top: 30px;
 }
 
-.gisConference, .description, .innovate-her-container {
-  text-align: left;  /* Align text to the left for all text elements */
-  margin: 0;         /* Remove any default margin that may cause spacing issues */
+.gisConference,
+.description,
+.innovate-her-container {
+  text-align: left; /* Align text to the left for all text elements */
+  margin: 0; /* Remove any default margin that may cause spacing issues */
 }
 
 .gisConference {
   font-size: 30px;
-  color: #D0CDEA;
-  text-align: center;         
+  color: #d0cdea;
+  text-align: center;
   margin: 0 0 10px; /* Add bottom margin to create space below */
 }
 
@@ -54,46 +56,26 @@
 .innovate {
   font-size: 70px;
   margin: 0; /* Remove any margin */
-  color: #D0CDEA;
-  filter: drop-shadow(0 0 20px black);
+  color: #d0cdea;
+  text-shadow: rgba(0, 0, 0, 0.25) 15px 20px 8px;
+  /* filter: drop-shadow(0 0 20px black); */
   position: relative;
-}
-
-.innovate::after {
-  content: "Innovate"; /* Same text as the original */
-  position: absolute;
-  top: 30%; /* Position the reflection below the original text */
-  left: 3%;
-  width: 100%;
-  color: black;
-  opacity: 0.1; /* Make the reflection a bit more transparent */
-  filter: blur(2px); /* Add blur to simulate a shadow effect */
 }
 
 .her {
   font-size: 70px;
   margin: 0; /* Remove any margin */
-  color: #E8C3D1;
-  filter: drop-shadow(0 0 20px black);
+  color: #e8c3d1;
+  text-shadow: rgba(0, 0, 0, 0.25) 15px 20px 8px;
+  /* filter: drop-shadow(0 0 20px black); */
   z-index: 10;
 }
 
-.her::after {
-  content: "HER"; /* Same text as the original */
-  position: absolute;
-  top: 30%; /* Position the reflection below the original text */
-  left: 5%;
-  width: 100%;
-  color: black;
-  opacity: 0.1; /* Make the reflection a bit more transparent */
-  filter: blur(2px); /* Add blur to simulate a shadow effect */
-}
-
 .description {
-  font-size: 25px;  /* Adjust to your desired size */
+  font-size: 25px; /* Adjust to your desired size */
   font-weight: normal;
-  color: #D0CDEA;
-  margin: 0;  /* Remove margin to keep spacing consistent */
+  color: #d0cdea;
+  margin: 0; /* Remove margin to keep spacing consistent */
 }
 
 /* Add gap below STEAM */
@@ -110,7 +92,7 @@
 }
 
 .mascot-image {
-  width: 100%; /* Allow image to take full width of its container */ 
+  width: 100%; /* Allow image to take full width of its container */
   max-width: 500px; /* You can set a max-width for the image */
   object-fit: cover; /* Ensure the image maintains its aspect ratio */
   padding-left: 200px;
@@ -125,7 +107,7 @@
   top: 310px;
   left: 220px;
   font-size: 80px;
-  color: #6363AB;
+  color: #6363ab;
   transform: rotate(75deg);
   filter: drop-shadow(0 0 20px white);
 }
@@ -145,14 +127,14 @@
   left: 180px;
   font-size: 90px;
   z-index: 1;
-  color: #ABA0CE;
+  color: #aba0ce;
   filter: drop-shadow(0 0 5px white); /* Apply a white glow effect using filter */
 }
 
 .left-plus {
   position: absolute;
   left: 200px;
-  color: #9D90C5;
+  color: #9d90c5;
   font-size: 50px;
   stroke-width: 1px;
   filter: drop-shadow(0 0 5px white); /* Apply a white glow effect */
@@ -174,7 +156,7 @@
   left: 100px;
   font-size: 60px;
   z-index: 1;
-  color: #ABA0CE;
+  color: #aba0ce;
   filter: drop-shadow(0 0 5px white);
 }
 
@@ -192,7 +174,7 @@
   top: 200px;
   left: 50px;
   font-size: 60px;
-  color: #ABA0CE;
+  color: #aba0ce;
   transform: rotate(-20deg);
   filter: drop-shadow(0 0 5px white);
 }
@@ -214,7 +196,7 @@
   font-size: 110px;
   z-index: 1;
   filter: drop-shadow(0 0 5px white);
-  color: #A795D6; 
+  color: #a795d6;
 }
 
 .right-flask {
@@ -222,7 +204,7 @@
   top: -20px;
   right: -130px;
   font-size: 90px;
-  color: #A795D6;
+  color: #a795d6;
   transform: rotate(20deg);
   filter: drop-shadow(0 0 5px white);
 }
@@ -231,7 +213,7 @@
   position: absolute;
   top: 100px;
   right: -40px;
-  color: #8175BB;
+  color: #8175bb;
   font-size: 30px;
   stroke-width: 1px;
   filter: drop-shadow(0 0 5px white);
@@ -286,13 +268,13 @@
   }
 
   .description-container {
-    margin-left: -50px;  /* Move the container to the left on mobile */
+    margin-left: -50px; /* Move the container to the left on mobile */
   }
 
   .mouse-pointer {
-    top: 65%;  /* Adjust position for mobile */
-    left: 60%;  /* Center it horizontally */
-    font-size: 50px;  /* Smaller size on mobile */
+    top: 65%; /* Adjust position for mobile */
+    left: 60%; /* Center it horizontally */
+    font-size: 50px; /* Smaller size on mobile */
   }
 
   .hero-buttons {
@@ -304,7 +286,7 @@
   }
 
   .mascot-image {
-    right: 5%;
+    right: 2.5%;
   }
 
   /* Hide gears on mobile */
@@ -318,6 +300,7 @@
   .right-plus,
   .left-flask,
   .right-flask,
+  .top-left-across,
   .hanging-line-flask {
     display: none;
   }
