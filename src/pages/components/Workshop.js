@@ -4,6 +4,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
 
 // Import all images
 import Flavia from '../images/Flavia.jpg';
+import KendraMunn from '../images/KendraMunn.jpg';
+import SijanPoudel from '../images/SijanPoudel.jpg';
 
 export default function Workshop() {
   const theme = useTheme();
@@ -40,21 +42,21 @@ export default function Workshop() {
     },
     {
       type: 'Technology',
-      title: 'Kendra Munn',
-      role: 'placeholder',
-      organization: 'placeholder',
-      linkedin: 'https://www.linkedin.com/in/bobbrown',
-      keyFocus: 'placeholder',
-      image: 'tbd' // Use the imported image
+      title: 'Kendra Munn (She/Her)',
+      role: '3D Urban Specialist',
+      organization: 'Esri Canada',
+      linkedin: 'https://www.linkedin.com/in/kendra-munn-55b087201/?originalSubdomain=ca',
+      keyFocus: '3D GIS, GIS for Urban planning, Indoor GIS',
+      image: KendraMunn // Use the imported image
     },
     {
       type: 'Engineering',
-      title: 'tbd',
-      role: 'tbd',
-      organization: 'tbd',
-      linkedin: 'https://www.linkedin.com/in/charliedavis',
-      keyFocus: 'tbd',
-      image: 'tbd' // Use the imported image
+      title: 'Sijan Poudel',
+      role: ' Founder of Docdachi & Chibikawa AI, Software Engineer, Generative AI',
+      organization: 'Heroic Design',
+      linkedin: 'https://www.linkedin.com/in/sijan-poudel-24b036174/?originalSubdomain=ca',
+      keyFocus: 'Key Expertise in Figma Design, Full Stack Development, Generative AI',
+      image: SijanPoudel // Use the imported image
     },
     {
       type: 'Engineering',
@@ -111,7 +113,7 @@ export default function Workshop() {
     <Box
       sx={{
         padding: isMobile ? '20px 10px' : '40px 20px', // Adjust padding for mobile
-        background: 'radial-gradient(circle, #584D7A, #57579F, #584D7A)', // New radial gradient
+        background: 'radial-gradient(circle, #5e5e7f, #57579F, #584D7A)', // New radial gradient
         borderRadius: '10px',
         color: '#FFF',
         width: '100%', // Span the entire page width

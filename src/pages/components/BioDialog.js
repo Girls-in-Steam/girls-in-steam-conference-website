@@ -58,7 +58,7 @@ export default function BioDialog(props) {
               marginBottom: '18px'
             }}>
             <img
-              style={{ maxWidth: '200px', borderRadius: '100%' }}
+              className="dialog-image" // Add the class here
               src={bio.src}
               alt="bio headshot"
             />
