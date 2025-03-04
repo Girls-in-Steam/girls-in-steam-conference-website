@@ -47,12 +47,12 @@ html {
   min-height: 200px;
 }
 .KeyNote-Background {
-  background-image: #5e5e7f;
+  background-image: linear-gradient(#6363ab, #5e5e7f);
   min-height: 200px;
 }
 
 .Workshop-Background {
-  background-image: #584d7a;
+  background-image: linear-gradient(#5e5e7f, #584d7a);
   min-height: 200px;
 }
 .Panelist-Background {

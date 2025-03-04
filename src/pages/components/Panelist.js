@@ -5,6 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
 import DrAnnale from '../images/Dr.AnnaleeYassi.png';
 import AshianaSunderji from '../images/AshianaSunderji.jpeg';
 import CloverLee from '../images/CloverLee.jpg';
+//tech
+import EmilyWang from '../images/EmilyWang.jpg';
 //enginnering
 import ArielleMurad from '../images/ArielleMurad.jpg';
 //arts
@@ -190,11 +192,12 @@ export default function Panelists() {
   const technologyPanelists = [
     // Add 5 panelists for Technology
     {
-      name: 'First Last (Pro/Nouns)',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      name: 'Emily Wang (She/Her)',
+      role: 'Incoming SWE Intern @ Workday',
+      linkedinUrl: 'https://www.linkedin.com/in/emilywang416/?originalSubdomain=ca',
+      imageUrl: EmilyWang,
+      focusArea:
+        'Java, JavaScript, TypeScript, Swift, Python, R, C++, Bash, SQL, React, Git, Docker, AWS, HTML, CSS'
     },
     {
       name: 'First Last (Pro/Nouns)',
@@ -350,10 +353,11 @@ export default function Panelists() {
   return (
     <Box
       sx={{
-        background: 'radial-gradient(circle, #4D4D8C, #4D4D8C, #4D4D8C)',
+        background: 'linear-gradient(to bottom, #564F7D, #6363AB)', // Vertical gradient
         padding: '40px 20px',
         borderRadius: '10px',
-        color: '#FFF'
+        color: '#FFF',
+        minHeight: '100vh' // Ensure the gradient covers the entire page height
       }}>
       <Typography
         variant="h3"

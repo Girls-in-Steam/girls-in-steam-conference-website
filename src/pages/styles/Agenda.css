@@ -9,7 +9,6 @@
 .agenda-background.expanded {
 min-height: 200px; /* Adjust as needed for the expanded state */
 position: relative; /* Ensure that the icon can be placed relative to the container */
-background: radial-gradient(circle, #5A4D85, #5A4D85, #5A4D85);
 }
 
 .agenda-header {
@@ -30,29 +29,6 @@ position: relative;
 z-index: 2; /* Ensure content is above the icon */
 }
 
-.custom-toggle-button {
-border: none;
-font-size: 3rem;
-padding: 8px 16px;
-background-color: transparent; /* Ensure background is transparent */
-color: #E8C3D1; /* Arrow is white in both states */
-transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smooth expand effect */
-box-shadow: none; /* Remove any box shadow */
-}
-
-/* Remove the default hover effect */
-.custom-toggle-button:hover {
-background-color: transparent; /* Ensures no background color on hover */
-border: none;
-box-shadow: none;
-}
-
-/* Ensure no shadow or background when selected */
-.custom-toggle-button.Mui-selected {
-background-color: transparent; /* Keep background transparent when selected */
-box-shadow: none; /* Remove any box shadow when selected */
-border: none;
-}
 
 
 /* Style for the MdScience Icon */
