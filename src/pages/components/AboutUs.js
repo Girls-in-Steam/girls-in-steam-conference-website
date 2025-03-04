@@ -42,7 +42,8 @@ export default function AboutUs() {
               textAlign: 'left',
               color: '#E8C3D1',
               fontFamily: 'Josefin Sans',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
             }}>
             ABOUT THE CONFERENCE
           </Typography>
@@ -50,7 +51,7 @@ export default function AboutUs() {
             variant="h6"
             sx={{
               textAlign: 'left',
-              color: 'white',
+              color: '#D0CDEA',
               fontFamily: 'Josefin Sans',
               fontWeight: 'normal',
               marginBottom: '20px'
@@ -71,7 +72,7 @@ export default function AboutUs() {
             variant="h6"
             sx={{
               textAlign: 'left',
-              color: 'white',
+              color: '#D0CDEA',
               fontWeight: 'medium',
               marginBottom: '70px'
             }}>

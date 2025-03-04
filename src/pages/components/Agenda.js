@@ -16,7 +16,7 @@ export default function Agenda() {
       }}>
       {/* Agenda Title */}
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           textAlign: 'center',
           color: '#E8C3D1',

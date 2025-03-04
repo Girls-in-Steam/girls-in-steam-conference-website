@@ -14,7 +14,7 @@ export default function Slider() {
   };
   return (
     <div className="the-team">
-      <Typography variant="h4" sx={{ fontWeight: 'bold', marginTop: '30px', color: 'white' }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', marginTop: '30px', color: '#E8C3D1' }}>
         THE TEAM BEHIND THE CONFERENCE
       </Typography>
       <div className="slider">

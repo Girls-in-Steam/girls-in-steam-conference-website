@@ -16,6 +16,7 @@ export default function Hero() {
       <div style={{ position: 'relative', width: '80%', height: '50vh', left: '-200px' }}>
         {/* Horizontal Line */}
         <PiLineVerticalBold
+          className="top-left-across"
           style={{
             position: 'absolute',
             top: '-50px',
@@ -59,14 +60,14 @@ export default function Hero() {
         {/* Date */}
         <div className="description-container" style={{ display: 'flex', alignItems: 'center' }}>
           <PiCalendarDotsFill
-            style={{ marginRight: '8px', verticalAlign: 'middle', color: '#6363AB' }}
+            style={{ marginRight: '8px', verticalAlign: 'middle', color: '#d0cdea' }}
           />
           <h4 className="description">March 29th, 2025</h4>
         </div>
 
         {/* Location */}
         <div className="description-container" style={{ display: 'flex', alignItems: 'center' }}>
-          <TiLocation style={{ marginRight: '8px', verticalAlign: 'middle', color: '#6363AB' }} />
+          <TiLocation style={{ marginRight: '8px', verticalAlign: 'middle', color: '#d0cdea' }} />
           <h4 className="description" style={{ lineHeight: '1.8' }}>
             The University of British Columbia
           </h4>

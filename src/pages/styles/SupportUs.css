@@ -20,12 +20,13 @@
   width: 100%;
 }
 
-.blurb {
+/* .blurb {
   font-size: 2rem;
   font-weight: bold;
-  color: #E8C3D1;
+  font-family: 'Josefin Sans';
+  color: #e8c3d1;
   margin-bottom: 20px;
-}
+} */
 
 .BoxContainer {
   display: flex;
@@ -54,7 +55,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
-
 
 .SponsorLogo:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
