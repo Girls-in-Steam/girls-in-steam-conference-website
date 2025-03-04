@@ -47,9 +47,11 @@
 .imgs-slide img {
   height: 80px;
   width: 80px;
+  max-width: 80px;
   margin: 0 24px;
   transition: transform 0.5s;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .imgs-slide img:hover {
