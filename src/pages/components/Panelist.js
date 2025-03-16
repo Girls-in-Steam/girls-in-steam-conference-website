@@ -7,8 +7,11 @@ import AshianaSunderji from '../images/AshianaSunderji.jpeg';
 import CloverLee from '../images/CloverLee.jpg';
 //tech
 import EmilyWang from '../images/EmilyWang.jpg';
+import ShellyBadhesha from '../images/ShellyBadhesha.jpg';
+import JessieMegan from '../images/JessieMegan.jpg';
 //enginnering
 import ArielleMurad from '../images/ArielleMurad.jpg';
+import TumiFabiyi from '../images/TumiFabiyi.jpg';
 //arts
 import JulianneNieh from '../images/JulianneNieh.jpg';
 import BonnieLu from '../images/BonnieLu.jpeg';
@@ -200,32 +203,32 @@ export default function Panelists() {
         'Java, JavaScript, TypeScript, Swift, Python, R, C++, Bash, SQL, React, Git, Docker, AWS, HTML, CSS'
     },
     {
-      name: 'First Last (Pro/Nouns)',
+      name: 'Shelly Badhesha',
+      role: 'Director, Banking, RBCx',
+      linkedinUrl: 'https://www.linkedin.com/in/consulting-shellybardai/',
+      imageUrl: ShellyBadhesha,
+      focusArea: 'The Impact of AI and Technology on Finance - How AI is transforming banking, investing, and financial decision-making. AI in Business and Consulting - How AI helps companies analyze data, predict trends, and make smarter decisions.'
+    },
+    {
+      name: 'Maya Bruck (Pro/Nouns)',
       role: 'tbd',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
       imageUrl: 'https://via.placeholder.com/100',
       focusArea: 'tbd'
     },
     {
-      name: 'First Last (Pro/Nouns)',
+      name: 'Rochelle Grayson (Pro/Nouns)',
       role: 'tbd',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
       imageUrl: 'https://via.placeholder.com/100',
       focusArea: 'tbd'
     },
     {
-      name: 'First Last (Pro/Nouns)',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
-    },
-    {
-      name: 'First Last (Pro/Nouns)',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      name: 'Jessie Megan (She/Her)',
+      role: 'UX Design Intern @ IBM, AI & Automation Team',
+      linkedinUrl: 'linkedin.com/in/jessiemegan',
+      imageUrl: JessieMegan,
+      focusArea: ' UX Design'
     }
   ];
 
@@ -248,10 +251,10 @@ export default function Panelists() {
     },
     {
       name: 'Tumi Fabiyi',
-      role: 'tbd',
+      role: 'Research Engineer Co-op -  Insporos; Director of External Outreach at WiDS; Partnerships Chair with NSBE.',
       linkedinUrl: 'https://www.linkedin.com/in/oliviawhite/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      imageUrl: TumiFabiyi,
+      focusArea: "Mechatronics and Robotics, Increasing access to STEAM Education for equity deserving groups. I'm also into SpaceTech!"
     },
     {
       name: 'First Last (Pro/Nouns)',
@@ -342,7 +345,7 @@ export default function Panelists() {
         'Graph theory, particularly graph embeddings, games on graphs, graph coloring and domination'
     },
     {
-      name: 'tbd',
+      name: 'Jessie Megan',
       role: 'tbd',
       linkedinUrl: 'https://bxnnieblu.wixsite.com/portfolio',
       imageUrl: 'tbd',

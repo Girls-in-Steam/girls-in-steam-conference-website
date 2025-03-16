@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
 import Flavia from '../images/Flavia.jpg';
 import KendraMunn from '../images/KendraMunn.jpg';
 import SijanPoudel from '../images/SijanPoudel.jpg';
+import TabreekSomani from '../images/TabreekSomani.jpg';
 
 export default function Workshop() {
   const theme = useTheme();
@@ -33,12 +34,12 @@ export default function Workshop() {
     },
     {
       type: 'Technology',
-      title: 'Tabreek Somani ',
-      role: 'placeholder',
-      organization: 'placeholder',
+      title: 'Tabreek Somani (She/Her)',
+      role: 'Data and AI Consultant',
+      organization: 'EY',
       linkedin: 'https://www.linkedin.com/in/alicejohnson',
-      keyFocus: 'placeholder',
-      image: 'tbd' // Use the imported image
+      keyFocus: 'Passionate about improving inclusivity in the tech industry, founded an online tutoring and volunteer management platform to provide STEM education for underserved youth, including neurodiverse students.',
+      image: TabreekSomani // Use the imported image
     },
     {
       type: 'Technology',
@@ -60,7 +61,7 @@ export default function Workshop() {
     },
     {
       type: 'Engineering',
-      title: 'tbd',
+      title: 'Harmanpreet Kaur',
       role: 'tbd',
       organization: 'tbd',
       linkedin: 'https://www.linkedin.com/in/dianaevans',
@@ -78,11 +79,11 @@ export default function Workshop() {
     },
     {
       type: 'Arts and Math',
-      title: 'placeholder',
-      role: 'Placeholder',
-      organization: 'Creative Studio',
+      title: 'Michelle Chan',
+      role: ' Senior Experience Design Lead',
+      organization: 'Province of British Columbia',
       linkedin: 'https://www.linkedin.com/in/frankharris',
-      keyFocus: 'placeholder',
+      keyFocus: " I'm on a journey to make user-centred design fun, accessible and sustainable for my community. I curate design processes using hands-on activities and collaborative interactions that leave participants and clients delighted and curious. I am driven by an ever-growing passion to improve the public service experience by changing how communities interact with our government products and services. ",
       image: 'tbd' // Use the imported image
     }
   ];
