@@ -35,8 +35,8 @@ export default function Home() {
           <Agenda />
         </div>
       </div>
-      {/* Add KeyNote Section */}
-      {/* <div className="KeyNote-Background" id="KeyNote">
+      {/* Add KeyNote Section
+      <div className="KeyNote-Background" id="KeyNote">
         <div className="KeyNote-Component">
           <KeyNote />
         </div>
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="Panelist-Component">
           <Panelist />
         </div>
-      </div> */}
+      </div>  */}
 
       <div className="Sponsor-FAQ-Team-Background">
         <div className="App-Component" id="Sponsors">
