@@ -8,9 +8,9 @@ import Hero from './components/Hero.js';
 import Sponsors from './components/Sponsors.js';
 import FAQ from './components/FAQ.js';
 import Agenda from './components/Agenda.js';
-// import Workshop from './components/Workshop.js';
-// import Panelist from './components/Panelist.js';
-// import KeyNote from './components/KeyNote.js';
+import Workshop from './components/Workshop.js';
+import Panelist from './components/Panelist.js';
+import KeyNote from './components/KeyNote.js';
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
           <Agenda />
         </div>
       </div>
-      {/* Add KeyNote Section
+      {/* Add KeyNote Section */}
       <div className="KeyNote-Background" id="KeyNote">
         <div className="KeyNote-Component">
           <KeyNote />
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="Panelist-Component">
           <Panelist />
         </div>
-      </div>  */}
+      </div> 
 
       <div className="Sponsor-FAQ-Team-Background">
         <div className="App-Component" id="Sponsors">

@@ -9,9 +9,11 @@ import CloverLee from '../images/CloverLee.jpg';
 import EmilyWang from '../images/EmilyWang.jpg';
 import ShellyBadhesha from '../images/ShellyBadhesha.jpg';
 import JessieMegan from '../images/JessieMegan.jpg';
+import VeronicaTan from '../images/VeronicaTan.jpg';
 //enginnering
 import ArielleMurad from '../images/ArielleMurad.jpg';
 import TumiFabiyi from '../images/TumiFabiyi.jpg';
+import JessieRehwald from '../images/JessieRehwald.jpg';
 //arts
 import JulianneNieh from '../images/JulianneNieh.jpg';
 import BonnieLu from '../images/BonnieLu.jpeg';
@@ -184,11 +186,11 @@ export default function Panelists() {
         'Critical public health nutrition and food anthropology from social justice perspectives'
     },
     {
-      name: 'Placeholder(Pro/Nouns)',
-      role: 'Placeholder',
+      name: 'Tasfiyah Kabir(she/her)',
+      role: 'Research Sponsorship Coordinator, Indigenous Physical Activity & Cultural Circle; U-Report Ambassador, UNICEF Canada; Director of Communications and Outreach, Divide Aid Network',
       linkedinUrl: 'https://www.linkedin.com/in/emilybrown/',
       imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      focusArea: 'International Migration Patterns of Nurses and Physicians in Canada Global Health Policy: Organization & Behaviour in Emergency Care Services Pharmacogenomic Influences on Major Depressive Disorder (MDD) Treatment GluN2B-containing NMDA receptors in regulating depression-like behavior and mediating the rapid antidepressant effects of ketamine Policy Briefing on Type 2 Diabetes in Bangladesh Screening and Support for Traumatic Brain Injury in Intimate Partner Violence Population Platformed Inteins: CFPS biomanufacturing platform'
     }
   ];
 
@@ -217,11 +219,11 @@ export default function Panelists() {
       focusArea: 'tbd'
     },
     {
-      name: 'Rochelle Grayson (Pro/Nouns)',
-      role: 'tbd',
+      name: 'Veronica Tan (She/Her)',
+      role: 'Manager in Technology Consulting at KPMG Canada.',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      imageUrl: VeronicaTan,
+      focusArea: 'Areas of expertise are in heavy assets, think anything with big machines. This could include construction, manufacturing, mining, utilities, etc.'
     },
     {
       name: 'Jessie Megan (She/Her)',
@@ -257,14 +259,14 @@ export default function Panelists() {
       focusArea: "Mechatronics and Robotics, Increasing access to STEAM Education for equity deserving groups. I'm also into SpaceTech!"
     },
     {
-      name: 'First Last (Pro/Nouns)',
-      role: 'tbd',
+      name: '  Jessie Rehwald(She/Her)',
+      role: 'Project Manager in Engineering Design & Construction – City of Richmond',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      imageUrl: JessieRehwald,
+      focusArea: 'Passionate about engineering, the environment, and urbanism, with a strong interest in how these fields intersect. As a Project Manager for the City of Richmond, I have the opportunity to witness this crossover firsthand through the planning, delivery, and impact of City projects on the community. '
     },
     {
-      name: 'First Last (Pro/Nouns)',
+      name: 'Demir Buse (Pro/Nouns)',
       role: 'tbd',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
       imageUrl: 'https://via.placeholder.com/100',

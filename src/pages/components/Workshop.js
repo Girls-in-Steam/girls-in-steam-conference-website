@@ -7,6 +7,10 @@ import Flavia from '../images/Flavia.jpg';
 import KendraMunn from '../images/KendraMunn.jpg';
 import SijanPoudel from '../images/SijanPoudel.jpg';
 import TabreekSomani from '../images/TabreekSomani.jpg';
+import FarahSamli from '../images/FarahSamli.jpg';
+import AliceHuang from '../images/AliceHuang.jpg';
+import HarmanpreetKaur from '../images/HarmanpreetKaur.jpg';
+import MichelleChan from '../images/MichelleChan.jpg';
 
 export default function Workshop() {
   const theme = useTheme();
@@ -16,21 +20,21 @@ export default function Workshop() {
   const workshops = [
     {
       type: 'Science',
-      title: 'placeholder',
-      role: 'placeholder',
-      organization: 'placeholder',
+      title: 'E. Farah Samli ',
+      role: 'independent contractor',
+      organization: 'independent',
       linkedin: 'https://spph.ubc.ca/faculty/professors/annalee-yassi/',
-      keyFocus: 'placeholder',
-      image: 'tbd' // Use the imported image
+      keyFocus: 'Vaccine development and commercialization Biomedical research and innovation Change management and strategic planning Project and operations management Science communication and marketing Policy and procedure evaluation Supporting tech ventures and non-profit organizations.',
+      image: FarahSamli, // Use the imported image
     },
     {
       type: 'Science',
-      title: 'placeholder',
-      role: 'placeholder',
-      organization: 'placeholder',
+      title: 'Dr. Alice Huang',
+      role: 'Family Medicine Resident Doctor',
+      organization: 'University of Alberta ',
       linkedin: 'https://www.linkedin.com/in/ashiana-sunderji-58715b1b5 ',
-      keyFocus: 'placeholder',
-      image: 'tbd' // Use the imported image
+      keyFocus: "Interest in Women's Health",
+      image: AliceHuang, // Use the imported image
     },
     {
       type: 'Technology',
@@ -62,11 +66,11 @@ export default function Workshop() {
     {
       type: 'Engineering',
       title: 'Harmanpreet Kaur',
-      role: 'tbd',
-      organization: 'tbd',
+      role: 'Software Engineer',
+      organization: 'Microsoft',
       linkedin: 'https://www.linkedin.com/in/dianaevans',
-      keyFocus: 'tbd',
-      image: 'tbd' // Use the imported image
+      keyFocus: 'Full Stack Engineer passionate about crafting sleek, user-friendly interfaces that make applications intuitive and effortless to use.',
+      image: HarmanpreetKaur // Use the imported image
     },
     {
       type: 'Arts and Math',
@@ -83,8 +87,8 @@ export default function Workshop() {
       role: ' Senior Experience Design Lead',
       organization: 'Province of British Columbia',
       linkedin: 'https://www.linkedin.com/in/frankharris',
-      keyFocus: " I'm on a journey to make user-centred design fun, accessible and sustainable for my community. I curate design processes using hands-on activities and collaborative interactions that leave participants and clients delighted and curious. I am driven by an ever-growing passion to improve the public service experience by changing how communities interact with our government products and services. ",
-      image: 'tbd' // Use the imported image
+      keyFocus: " I'm on a journey to make user-centred design fun, accessible and sustainable for my community. I curate design processes using hands-on activities and collaborative interactions that leave participants and clients delighted and curious. ",
+      image: MichelleChan // Use the imported image
     }
   ];
 
