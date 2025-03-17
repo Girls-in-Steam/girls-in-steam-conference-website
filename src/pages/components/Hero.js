@@ -12,6 +12,21 @@ import mascot from '../images/mascot.png';
 export default function Hero() {
   return (
     <div id="Hero">
+      {/* Add the keyframes to a style tag */}
+      <style>
+        {`
+          @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
+        `}
+      </style>
+
       {/* Decorative Elements Container */}
       <div style={{ position: 'relative', width: '80%', height: '50vh', left: '-200px' }}>
         {/* Horizontal Line */}
@@ -34,16 +49,40 @@ export default function Hero() {
         <PiLineVerticalBold className="hanging-line-left-gear" style={{ zIndex: 1 }} />
 
         {/* Flask Icon */}
-        <MdScience className="left-flask" style={{ zIndex: 1 }} />
+        <MdScience
+          className="left-flask"
+          style={{
+            zIndex: 1,
+            animation: 'float 3s ease-in-out infinite' // Apply up-and-down animation
+          }}
+        />
 
         {/* Large Gear Icon */}
-        <FaGear className="left-large-gear" style={{ zIndex: 1 }} />
+        <FaGear
+          className="left-large-gear"
+          style={{
+            zIndex: 1,
+            animation: 'spin 4s linear infinite' // Apply spinning animation
+          }}
+        />
 
         {/* Smaller Gear Icon */}
-        <FaGear className="left-small-gear" style={{ zIndex: 1 }} />
+        <FaGear
+          className="left-small-gear"
+          style={{
+            zIndex: 1,
+            animation: 'spin 4s linear infinite' // Apply spinning animation
+          }}
+        />
 
         {/* Plus Icon */}
-        <ImPlus className="left-plus" style={{ zIndex: 1 }} />
+        <ImPlus
+          className="left-plus"
+          style={{
+            zIndex: 1,
+            animation: 'float 3s ease-in-out infinite' // Apply up-and-down animation
+          }}
+        />
         <FaMousePointer className="mouse-pointer" style={{ zIndex: 1 }} />
       </div>
 
@@ -130,11 +169,29 @@ export default function Hero() {
       <div className="image-container">
         <img src={mascot} alt="mascot" className="mascot-image" />
         <PiLineVerticalBold className="hanging-line-right" style={{ zIndex: 1 }} />
-        <MdScience className="right-flask" style={{ zIndex: 1 }} />
-        <FaGear className="right-gear" style={{ zIndex: 1 }} />
+        <MdScience
+          className="right-flask"
+          style={{
+            zIndex: 1,
+            animation: 'float 3s ease-in-out infinite' // Apply up-and-down animation
+          }}
+        />
+        <FaGear
+          className="right-gear"
+          style={{
+            zIndex: 1,
+            animation: 'spin 4s linear infinite' // Apply spinning animation
+          }}
+        />
 
         {/* Plus Icon */}
-        <ImPlus className="right-plus" style={{ zIndex: 1 }} />
+        <ImPlus
+          className="right-plus"
+          style={{
+            zIndex: 1,
+            animation: 'float 3s ease-in-out infinite' // Apply up-and-down animation
+          }}
+        />
       </div>
     </div>
   );

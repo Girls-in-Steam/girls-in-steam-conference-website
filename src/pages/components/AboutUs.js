@@ -32,7 +32,8 @@ export default function AboutUs() {
               zIndex: 2,
               color: '#ABA0CE', // Use your desired color
               opacity: 0.3,
-              transform: 'rotate(20deg)'
+              transform: 'rotate(20deg)',
+              animation: 'spin 4s linear infinite'
             }}
           />
 

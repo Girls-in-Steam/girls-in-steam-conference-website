@@ -8,16 +8,8 @@ export const execTeamFAQData = [
     answer: 'Yes! Lunch will be served and there will be snacks throughout the event.'
   },
   {
-    question: 'Who can attend the event?',
-    answer: 'tbd'
-  },
-  {
     question: 'Where can I find the schedule?',
     answer: 'You can find it on our website here!'
-  },
-  {
-    question: 'Are tickets refundable or transferable?',
-    answer: 'tbd'
   },
   {
     question: 'When and where will the conference take place?',
@@ -25,7 +17,20 @@ export const execTeamFAQData = [
   },
   {
     question: 'How do I register for the conference?',
-    answer: 'You can register online at ___. Early registration is encouraged to secure your spot.'
+    answer: (
+      <>
+        You can register online{' '}
+        <a
+          href="https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#D0CDEA', textDecoration: 'underline' }} // White color and underline
+        >
+          here
+        </a>
+        . Early registration is encouraged to secure your spot.
+      </>
+    )
   },
   {
     question: 'What is included in the registration fee?',

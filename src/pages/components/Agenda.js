@@ -12,8 +12,25 @@ export default function Agenda() {
         flexDirection: 'column',
         alignItems: 'center', // Center the entire agenda horizontally
         justifyContent: 'center', // Center the entire agenda vertically
-        minHeight: '100vh'
+        minHeight: '100vh',
+        overflow: 'hidden' // Ensure animations don't overflow
       }}>
+      {/* Add the keyframes to a style tag */}
+      <style>
+        {`
+          @keyframes slideIn {
+            from {
+              transform: translateX(-100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        `}
+      </style>
+
       {/* Agenda Title */}
       <Typography
         variant="h4"
@@ -23,7 +40,8 @@ export default function Agenda() {
           fontFamily: 'Josefin Sans',
           fontWeight: 'bold',
           marginBottom: '40px',
-          fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' } // Responsive font size
+          fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }, // Responsive font size
+          animation: 'slideIn 1s ease-out' // Apply slide-in animation
         }}>
         AGENDA
       </Typography>
@@ -44,7 +62,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' }, // Align to start on mobile, center on larger screens
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' } // Stack vertically on mobile
+            flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on mobile
+            animation: 'slideIn 1s ease-out 0.2s', // Slide in with delay
+            animationFillMode: 'both' // Ensure the element stays visible after animation
           }}>
           <Typography
             variant="h6"
@@ -75,7 +95,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 0.4s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -106,7 +128,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 0.6s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -137,7 +161,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 0.8s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -158,7 +184,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            Breakfast @ TBD
+            Breakfast @ ESC
           </Typography>
         </Box>
 
@@ -168,7 +194,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 1s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -199,7 +227,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 1.2s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -230,7 +260,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 1.4s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -261,7 +293,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 1.6s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -272,7 +306,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            4:20PM - 4:30PM
+            4:20PM - 4:40PM
           </Typography>
           <Typography
             variant="body1"
@@ -282,7 +316,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            Break
+            Break @ ESC
           </Typography>
         </Box>
 
@@ -292,7 +326,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 1.8s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -303,7 +339,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            4:30PM - 5:00PM
+            4:40PM - 5:30PM
           </Typography>
           <Typography
             variant="body1"
@@ -313,7 +349,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            Closing Keynote @ TBD
+            Closing Keynote @ ESC
           </Typography>
         </Box>
 
@@ -323,7 +359,9 @@ export default function Agenda() {
             display: 'flex',
             alignItems: { xs: 'flex-start', sm: 'center' },
             gap: '10px',
-            flexDirection: { xs: 'column', sm: 'row' }
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 2s', // Slide in with delay
+            animationFillMode: 'both'
           }}>
           <Typography
             variant="h6"
@@ -334,7 +372,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            5:00PM - 5:30PM
+            5:30PM - 6:00PM
           </Typography>
           <Typography
             variant="body1"
@@ -344,7 +382,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            Final Remarks & Closing @ TBD
+            Final Remarks & Closing @ ESC
           </Typography>
         </Box>
       </Box>
