@@ -101,7 +101,7 @@ export default function Hero() {
           <PiCalendarDotsFill
             style={{ marginRight: '8px', verticalAlign: 'middle', color: '#d0cdea' }}
           />
-          <h4 className="description">March 29th, 2025</h4>
+          <h4 className="description">March 29th, 2025 8:30AM - 5:30PM</h4>
         </div>
 
         {/* Location */}
@@ -122,7 +122,7 @@ export default function Hero() {
             sx={{
               width: 180,
               height: 50,
-              backgroundColor: '#6363AB',
+              backgroundColor: '#7D5390',
               color: 'white',
               borderRadius: 4,
               fontFamily: 'Josefin Sans',
@@ -146,7 +146,7 @@ export default function Hero() {
             sx={{
               width: 180,
               height: 50,
-              backgroundColor: 'rgb(125, 83, 144, 0.4)',
+              backgroundColor: 'hsl(240, 30%, 53%)',
               color: 'white',
               borderRadius: 4,
               fontFamily: 'Josefin Sans',
@@ -156,7 +156,8 @@ export default function Hero() {
               boxShadow: '0 0 10px white',
               zIndex: 10, // Higher than decorative elements
               '&:hover': {
-                boxShadow: '0 0 15px white'
+                boxShadow: '0 0 15px white',
+                backgroundColor: 'hsl(240, 30%, 40%)'
               }
             }}
             variant="contained">
