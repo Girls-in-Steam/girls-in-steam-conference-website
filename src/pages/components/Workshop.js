@@ -1,12 +1,18 @@
 import React from 'react';
 import { Typography, Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
+import { useInView } from 'react-intersection-observer'; // Import useInView hook
 
-// Import all images
-import Flavia from '../images/Flavia.jpg';
+// Import images
+import FarahSamli from '../images/FarahSamli.jpeg';
+import AliceHuang from '../images/AliceHuang.jpeg';
 import KendraMunn from '../images/KendraMunn.jpg';
-import SijanPoudel from '../images/SijanPoudel.jpg';
 import TabreekSomani from '../images/TabreekSomani.jpg';
+import SijanPoudel from '../images/SijanPoudel.jpg';
+import HarmanpreetKaur from '../images/HarmanpreetKaur.jpeg';
+import Flavia from '../images/Flavia.jpg';
+import MichelleChan from '../images/MichelleChan.jpeg';
+import FaezehYazdi from '../images/FaezehYazdi.jpg';
 
 export default function Workshop() {
   const theme = useTheme();
@@ -14,31 +20,35 @@ export default function Workshop() {
 
   // Example data for workshops
   const workshops = [
+    // Science
     {
       type: 'Science',
-      title: 'placeholder',
-      role: 'placeholder',
-      organization: 'placeholder',
-      linkedin: 'https://spph.ubc.ca/faculty/professors/annalee-yassi/',
-      keyFocus: 'placeholder',
-      image: 'tbd' // Use the imported image
+      title: 'E. Farah Samli (She/Her)',
+      role: 'Independent Contractor + TEDx Speaker',
+      organization: 'PhD, Immunology and Vaccine Delivery, BS, Applied Biological Sciences',
+      linkedin: 'https://www.linkedin.com/in/efsamli/',
+      keyFocus:
+        'Vaccine development and commercialization, Biomedical research and innovation, Change management and strategic planning',
+      image: FarahSamli // Use the imported image
     },
     {
       type: 'Science',
-      title: 'placeholder',
-      role: 'placeholder',
-      organization: 'placeholder',
-      linkedin: 'https://www.linkedin.com/in/ashiana-sunderji-58715b1b5 ',
-      keyFocus: 'placeholder',
-      image: 'tbd' // Use the imported image
+      title: 'Dr. Alice Huang (She/Her)',
+      role: ' Family Medicine Resident Doctor',
+      organization: 'University of Alberta',
+      linkedin: 'https://www.linkedin.com/in/alicejhuang/',
+      keyFocus: "Interest in Women's Health ",
+      image: AliceHuang // Use the imported image
     },
+    // Technology
     {
       type: 'Technology',
       title: 'Tabreek Somani (She/Her)',
       role: 'Data and AI Consultant',
       organization: 'EY',
       linkedin: 'https://www.linkedin.com/in/alicejohnson',
-      keyFocus: 'Passionate about improving inclusivity in the tech industry, founded an online tutoring and volunteer management platform to provide STEM education for underserved youth, including neurodiverse students.',
+      keyFocus:
+        'Passionate about improving inclusivity in the tech industry, founded an online tutoring and volunteer management platform to provide STEM education for underserved youth, including neurodiverse students.',
       image: TabreekSomani // Use the imported image
     },
     {
@@ -50,6 +60,7 @@ export default function Workshop() {
       keyFocus: '3D GIS, GIS for Urban planning, Indoor GIS',
       image: KendraMunn // Use the imported image
     },
+    // Engineering
     {
       type: 'Engineering',
       title: 'Sijan Poudel',
@@ -61,15 +72,17 @@ export default function Workshop() {
     },
     {
       type: 'Engineering',
-      title: 'Harmanpreet Kaur',
-      role: 'tbd',
-      organization: 'tbd',
-      linkedin: 'https://www.linkedin.com/in/dianaevans',
-      keyFocus: 'tbd',
-      image: 'tbd' // Use the imported image
+      title: 'Harmanpreet Kaur (She/Her)',
+      role: 'Software Engineer',
+      organization: 'Microsoft',
+      linkedin: 'https://www.linkedin.com/in/hkaur023/',
+      keyFocus:
+        'Full Stack Engineer passionate about crafting sleek, user-friendly interfaces that make applications intuitive and effortless to use.',
+      image: HarmanpreetKaur // Use the imported image
     },
+    // Arts
     {
-      type: 'Arts and Math',
+      type: 'Arts',
       title: 'Flavia Chonso',
       role: 'Senior Product Designer',
       organization: 'Compass Digital',
@@ -78,13 +91,33 @@ export default function Workshop() {
       image: Flavia // Use the imported image
     },
     {
-      type: 'Arts and Math',
+      type: 'Arts',
       title: 'Michelle Chan',
       role: ' Senior Experience Design Lead',
       organization: 'Province of British Columbia',
-      linkedin: 'https://www.linkedin.com/in/frankharris',
-      keyFocus: " I'm on a journey to make user-centred design fun, accessible and sustainable for my community. I curate design processes using hands-on activities and collaborative interactions that leave participants and clients delighted and curious. I am driven by an ever-growing passion to improve the public service experience by changing how communities interact with our government products and services. ",
-      image: 'tbd' // Use the imported image
+      linkedin: 'https://www.linkedin.com/in/michellechan428/?originalSubdomain=ca',
+      keyFocus: 'Making user-centred design fun, accessible and sustainable for the community',
+      image: MichelleChan
+    },
+    // Math
+    {
+      type: 'Math',
+      title: 'Mahsa Rad',
+      role: 'Mathematician',
+      organization: 'University of Mathland',
+      linkedin: 'https://www.linkedin.com/in/mathspeaker1',
+      keyFocus: 'Pure Mathematics, Number Theory, and Cryptography',
+      image: 'placeholder' // Use the imported image
+    },
+    {
+      type: 'Math',
+      title: 'Faezeh Yazd (She/Her)',
+      role: 'Postdoctoral Fellow, Department of Statistics and Actuarial Science',
+      organization: 'SFU.',
+      linkedin: 'https://www.linkedin.com/in/faezeh-yazdi-3983787a/',
+      keyFocus:
+        'Computer model (simulator) calibration, Emulation and uncertainty quantification, Experimental design and advanced statistical methods',
+      image: FaezehYazdi // Use the imported image
     }
   ];
 
@@ -98,13 +131,15 @@ export default function Workshop() {
   const getWorkshopDetails = (type) => {
     switch (type) {
       case 'Science':
-        return { emoji: '🔭', location: '@ CEME 1202' };
+        return { emoji: '🔭', location: '@ BUCH B213' };
       case 'Technology':
-        return { emoji: '💻', location: '@ MCLD 2018' };
+        return { emoji: '💻', location: '@ BUCH B315' };
       case 'Engineering':
-        return { emoji: '📋', location: '@ MCLD 3018' };
-      case 'Arts and Math':
-        return { emoji: '📑 🧮', location: '@ MCLD 2014' };
+        return { emoji: '📋', location: '@ BUCH D322' };
+      case 'Arts':
+        return { emoji: '📑', location: '@ Buch D323' };
+      case 'Math':
+        return { emoji: '🧮', location: '@ Buch D323' };
       default:
         return { emoji: '', location: '' };
     }
@@ -139,13 +174,13 @@ export default function Workshop() {
           padding: '20px',
           backgroundColor: 'transparent', // Transparent background
           borderRadius: '10px',
-          alignItems: 'left'
+          alignItems: 'center'
         }}>
         <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
           • Attendees are encouraged to have lunch between workshops.
         </Typography>
         <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
-          • Each category (Science, Arts & Math, Technology, Engineering) has 2 workshops. Attendees
+          • Each category (Science, Arts, Math, Technology, Engineering) has 2 workshops. Attendees
           are welcome to attend any 2 workshops of their choice!
         </Typography>
         <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
@@ -191,88 +226,102 @@ export default function Workshop() {
                   width: 'fit-content', // Fit content width
                   margin: '0 auto' // Center the grid
                 }}>
-                {group.map((workshop, index) => (
-                  <Box key={index}>
-                    {/* Time Label */}
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        textAlign: 'center',
-                        color: '#FFF',
-                        marginBottom: '10px',
-                        fontWeight: 'bold'
-                      }}>
-                      {index === 0
-                        ? '11:00 AM - 12:00 PM' // Left box
-                        : groupIndex === 0 || groupIndex === 3
-                          ? '1:30 PM - 2:30 PM' // First and fourth right boxes
-                          : '12:00 PM - 1:00 PM'}{' '}
-                      {/* Second and third right boxes */}
-                    </Typography>
-                    {/* Workshop square */}
+                {group.map((workshop, index) => {
+                  const { ref, inView } = useInView({
+                    triggerOnce: true, // Only trigger the animation once
+                    threshold: 0.1 // Trigger when 10% of the element is visible
+                  });
+
+                  return (
                     <Box
+                      key={index}
+                      ref={ref}
                       sx={{
-                        backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
-                        borderRadius: '10px',
-                        padding: '20px',
-                        textAlign: 'left',
-                        color: '#FFF',
-                        width: isMobile ? '100%' : '400px', // Full width on mobile
-                        height: isMobile ? 'auto' : '350px', // Auto height on mobile
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center', // Center the image and text
-                        position: 'relative' // For the vertical line
+                        opacity: inView ? 1 : 0,
+                        transform: inView ? 'translateY(0)' : 'translateY(20px)',
+                        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out'
                       }}>
-                      {/* Circular Photo */}
-                      <Box
-                        sx={{
-                          width: '100px',
-                          height: '100px',
-                          borderRadius: '50%',
-                          backgroundColor: '#FFF', // Placeholder for the image
-                          marginBottom: '10px',
-                          overflow: 'hidden'
-                        }}>
-                        <img
-                          src={workshop.image} // Use the imported image
-                          alt={workshop.title}
-                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        />
-                      </Box>
-                      {/* Name and LinkedIn Icon */}
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '10px',
-                          marginBottom: '10px'
-                        }}>
-                        <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
-                          {workshop.title}
-                        </Typography>
-                        <IconButton
-                          href={workshop.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          sx={{ color: '#0A66C2', padding: '0' }}>
-                          <LinkedInIcon />
-                        </IconButton>
-                      </Box>
-                      {/* Role and Organization */}
-                      <Typography variant="body1" sx={{ marginBottom: '10px' }}>
-                        {workshop.role} ({workshop.organization})
-                      </Typography>
-                      {/* Key Focus Area/Research Interest */}
+                      {/* Time Label */}
                       <Typography
                         variant="body1"
-                        sx={{ fontStyle: 'italic', marginBottom: '10px' }}>
-                        Key Focus Area/Research Interest:
+                        sx={{
+                          textAlign: 'center',
+                          color: '#FFF',
+                          marginBottom: '10px',
+                          fontWeight: 'bold'
+                        }}>
+                        {index === 0
+                          ? '11:00 AM - 12:00 PM' // Left box
+                          : groupIndex === 0 || groupIndex === 3 || groupIndex === 4
+                            ? '1:30 PM - 2:30 PM' // 1, 4, 5 right boxes
+                            : '12:00 PM - 1:00 PM'}{' '}
+                        {/* Second and third right boxes */}
                       </Typography>
-                      <Typography variant="body1">{workshop.keyFocus}</Typography>
+                      {/* Workshop square */}
+                      <Box
+                        sx={{
+                          backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
+                          borderRadius: '10px',
+                          padding: '20px',
+                          textAlign: 'center',
+                          color: '#FFF',
+                          width: isMobile ? '100%' : '400px', // Full width on mobile
+                          height: isMobile ? 'auto' : '350px', // Auto height on mobile
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center', // Center the image and text
+                          position: 'relative' // For the vertical line
+                        }}>
+                        {/* Circular Photo */}
+                        <Box
+                          sx={{
+                            width: '100px',
+                            height: '100px',
+                            borderRadius: '50%',
+                            backgroundColor: '#FFF', // Placeholder for the image
+                            marginBottom: '10px',
+                            overflow: 'hidden'
+                          }}>
+                          <img
+                            src={workshop.image} // Use the imported image
+                            alt={workshop.title}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                          />
+                        </Box>
+                        {/* Name and LinkedIn Icon */}
+                        <Box
+                          sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            marginBottom: '10px'
+                          }}>
+                          <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
+                            {workshop.title}
+                          </Typography>
+                          <IconButton
+                            href={workshop.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ color: '#0A66C2', padding: '0' }}>
+                            <LinkedInIcon />
+                          </IconButton>
+                        </Box>
+                        {/* Role and Organization */}
+                        <Typography variant="body1" sx={{ marginBottom: '10px' }}>
+                          {workshop.role} ({workshop.organization})
+                        </Typography>
+                        {/* Key Focus Area/Research Interest */}
+                        <Typography
+                          variant="body1"
+                          sx={{ fontStyle: 'italic', marginBottom: '10px' }}>
+                          Key Focus Area/Research Interest:
+                        </Typography>
+                        <Typography variant="body1">{workshop.keyFocus}</Typography>
+                      </Box>
                     </Box>
-                  </Box>
-                ))}
+                  );
+                })}
               </Box>
             </Box>
           );

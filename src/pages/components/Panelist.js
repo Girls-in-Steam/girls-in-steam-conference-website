@@ -1,34 +1,41 @@
 import React from 'react';
 import { Typography, Box, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
-//science
+import { useInView } from 'react-intersection-observer'; // Import useInView hook
+
+// Import images
 import DrAnnale from '../images/Dr.AnnaleeYassi.png';
 import AshianaSunderji from '../images/AshianaSunderji.jpeg';
 import CloverLee from '../images/CloverLee.jpg';
-//tech
+import TasfiyahKabir from '../images/TasfiyahKabir.jpeg';
 import EmilyWang from '../images/EmilyWang.jpg';
 import ShellyBadhesha from '../images/ShellyBadhesha.jpg';
+import VeronicaTan from '../images/VeronicaTan.png';
 import JessieMegan from '../images/JessieMegan.jpg';
-//enginnering
 import ArielleMurad from '../images/ArielleMurad.jpg';
 import TumiFabiyi from '../images/TumiFabiyi.jpg';
-//arts
+import JessieRehwald from '../images/Jessie Rehwald.jpg';
 import JulianneNieh from '../images/JulianneNieh.jpg';
 import BonnieLu from '../images/BonnieLu.jpeg';
 import TiffanyPotter from '../images/TiffanyPotter.jpeg';
 import KinwaBluesky from '../images/KinwaBluesky.jpeg';
 import JinLee from '../images/JinLee.png';
-
-//maths
 import AnaMucalica from '../images/AnaMucalica.jpg';
 import FaezehYazdi from '../images/FaezehYazdi.jpg';
 import TaraUbovic from '../images/TaraUbovic.jpg';
 import MacKenzieCarr from '../images/MacKenzieCarr.jpg';
+
 export default function Panelists() {
-  // Function to render a single panelist square
+  // Function to render a single panelist square with scroll animation
   const renderPanelistSquare = (name, role, linkedinUrl, imageUrl, focusArea) => {
+    const { ref, inView } = useInView({
+      triggerOnce: true, // Only trigger the animation once
+      threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
     return (
       <Box
+        ref={ref}
         sx={{
           width: '400px',
           height: 'auto',
@@ -38,7 +45,10 @@ export default function Panelists() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center', // Center the image and name
-          textAlign: 'left' // Left-align the rest of the text
+          textAlign: 'center', // Left-align the rest of the text
+          opacity: inView ? 1 : 0,
+          transform: inView ? 'translateY(0)' : 'translateY(20px)',
+          transition: 'opacity 0.5s ease-out, transform 0.5s ease-out'
         }}>
         {/* Circular Picture */}
         <Box
@@ -76,15 +86,17 @@ export default function Panelists() {
           </IconButton>
         </Box>
         {/* Left-Aligned Text */}
-        <Typography variant="body1" sx={{ marginBottom: '10px', textAlign: 'left', color: '#fff' }}>
+        <Typography
+          variant="body1"
+          sx={{ marginBottom: '10px', textAlign: 'center', color: '#fff' }}>
           {role}
         </Typography>
         <Typography
           variant="body1"
-          sx={{ marginBottom: '10px', textAlign: 'left', fontWeight: 'bold', color: '#fff' }}>
+          sx={{ marginBottom: '10px', textAlign: 'center', fontWeight: 'bold', color: '#fff' }}>
           Key Focus Area/Research Interest:
         </Typography>
-        <Typography variant="body2" sx={{ textAlign: 'left', color: '#fff' }}>
+        <Typography variant="body2" sx={{ textAlign: 'center', color: '#fff' }}>
           {focusArea}
         </Typography>
       </Box>
@@ -169,7 +181,7 @@ export default function Panelists() {
         'Oncology: Nutrition for Prevention, Department of Supportive Care, Radio Theranostics (currently), Neuro-oncology (2025 summer)'
     },
     {
-      name: 'Elenor Eden',
+      name: 'placeholder',
       role: 'placeholder',
       linkedinUrl: 'https://www.linkedin.com/in/janesmith/',
       imageUrl: 'https://via.placeholder.com/100',
@@ -184,11 +196,12 @@ export default function Panelists() {
         'Critical public health nutrition and food anthropology from social justice perspectives'
     },
     {
-      name: 'Placeholder(Pro/Nouns)',
-      role: 'Placeholder',
-      linkedinUrl: 'https://www.linkedin.com/in/emilybrown/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      name: 'Tasfiyah Kabir',
+      role: "Research Assistant, BC Children's Hospital (Janssen Lab, Play Outside Lab)",
+      linkedinUrl: 'https://www.linkedin.com/in/tasfiyah/',
+      imageUrl: TasfiyahKabir,
+      focusArea:
+        'International Migration Patterns of Nurses and Physicians in Canada, Global Health Policy: Organization & Behaviour in Emergency Care Services,Pharmacogenomic Influences on Major Depressive Disorder (MDD) Treatment'
     }
   ];
 
@@ -207,7 +220,8 @@ export default function Panelists() {
       role: 'Director, Banking, RBCx',
       linkedinUrl: 'https://www.linkedin.com/in/consulting-shellybardai/',
       imageUrl: ShellyBadhesha,
-      focusArea: 'The Impact of AI and Technology on Finance - How AI is transforming banking, investing, and financial decision-making. AI in Business and Consulting - How AI helps companies analyze data, predict trends, and make smarter decisions.'
+      focusArea:
+        'The Impact of AI and Technology on Finance - How AI is transforming banking, investing, and financial decision-making. AI in Business and Consulting - How AI helps companies analyze data, predict trends, and make smarter decisions.'
     },
     {
       name: 'Maya Bruck (Pro/Nouns)',
@@ -217,11 +231,11 @@ export default function Panelists() {
       focusArea: 'tbd'
     },
     {
-      name: 'Rochelle Grayson (Pro/Nouns)',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      name: 'Veronica Tan (She/Her)',
+      role: 'Manager in Technology Consulting @ KPMG',
+      linkedinUrl: 'https://www.linkedin.com/in/veronicawootan/',
+      imageUrl: VeronicaTan,
+      focusArea: 'Heavy assets - construction, manufacturing, mining, utilities, etc'
     },
     {
       name: 'Jessie Megan (She/Her)',
@@ -254,17 +268,19 @@ export default function Panelists() {
       role: 'Research Engineer Co-op -  Insporos; Director of External Outreach at WiDS; Partnerships Chair with NSBE.',
       linkedinUrl: 'https://www.linkedin.com/in/oliviawhite/',
       imageUrl: TumiFabiyi,
-      focusArea: "Mechatronics and Robotics, Increasing access to STEAM Education for equity deserving groups. I'm also into SpaceTech!"
+      focusArea:
+        "Mechatronics and Robotics, Increasing access to STEAM Education for equity deserving groups. I'm also into SpaceTech!"
     },
     {
-      name: 'First Last (Pro/Nouns)',
-      role: 'tbd',
+      name: 'Jessie Rehwald (She/Her)',
+      role: 'Project Manager in Engineering Design & Construction @ City of Richmond',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      imageUrl: JessieRehwald,
+      focusArea:
+        'Engineering, the environment, and urbanism, with a strong interest in how these fields intersect. '
     },
     {
-      name: 'First Last (Pro/Nouns)',
+      name: 'Demir Buse',
       role: 'tbd',
       linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
       imageUrl: 'https://via.placeholder.com/100',
@@ -300,7 +316,7 @@ export default function Panelists() {
       role: 'Professor of Teaching, Department of English Language and Literatures @ UBC',
       linkedinUrl: 'https://english.ubc.ca/profile/tiffany-potter/',
       imageUrl: TiffanyPotter,
-      focusArea: 'tbd'
+      focusArea: 'Indigenous health, data governance, and substantive equality.'
     },
     {
       name: 'Bonnie Lu(She/Her)',
@@ -334,7 +350,7 @@ export default function Panelists() {
       role: 'Statistical Analyst - Project Assistant @ NEBLab',
       linkedinUrl: 'https://www.linkedin.com/in/tara-ubovic/',
       imageUrl: TaraUbovic,
-      focusArea: 'tbd'
+      focusArea: 'The Hidden Math Behind Everyday Life'
     },
     {
       name: 'MacKenzie Carr (She/Her)',
@@ -345,7 +361,7 @@ export default function Panelists() {
         'Graph theory, particularly graph embeddings, games on graphs, graph coloring and domination'
     },
     {
-      name: 'Jessie Megan',
+      name: 'tbd',
       role: 'tbd',
       linkedinUrl: 'https://bxnnieblu.wixsite.com/portfolio',
       imageUrl: 'tbd',
@@ -375,18 +391,19 @@ export default function Panelists() {
       </Typography>
 
       {/* Science Panel */}
-      {renderPanelSection('🔭 Science Panel @ TBD', sciencePanelists)}
+      {renderPanelSection('🔭 Science Panel @ BUCH A102', sciencePanelists)}
 
       {/* Technology Panel */}
-      {renderPanelSection('💻 Technology Panel @ TBD', technologyPanelists)}
+      {renderPanelSection('💻 Technology Panel @ BUCH A103', technologyPanelists)}
 
       {/* Engineering Panel */}
-      {renderPanelSection('📋 Engineering Panel @ TBD', engineeringPanelists)}
+      {renderPanelSection('📋 Engineering Panel @ BUCH A104', engineeringPanelists)}
 
       {/* Arts Panel */}
-      {renderPanelSection('📑 Arts Panel @ TBD', artsPanelists)}
-      {/* Arts Panel */}
-      {renderPanelSection('📑 Math Panel @ TBD', mathPanelists)}
+      {renderPanelSection('📑 Arts Panel @ BUCH B307', artsPanelists)}
+
+      {/* Math Panel */}
+      {renderPanelSection('📑 Math Panel @ BUCH D317', mathPanelists)}
     </Box>
   );
 }
