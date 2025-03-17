@@ -1,45 +1,26 @@
 import './../styles/SponsorPkg.css';
-import { useRef } from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function SponsorPkg() {
-  const dialogRef = useRef();
+  const [isOpen, setOpen] = useState(false);
+
+  const togglePkg = () => {
+    setOpen(!isOpen);
+  };
+
+  if (isOpen) {
+    document.body.classList.add('active-modal');
+  } else {
+    document.body.classList.remove('active-modal');
+  }
+
   return (
     <div id="SponsorPkg">
-      {/* Opened dialog */}
-      <dialog className="popup" ref={dialogRef}>
-        <div className="pkgContainer">
-          {/* Close button */}
-          <Button
-            className="closeButton"
-            size="large"
-            onClick={() => {
-              dialogRef.current?.close();
-            }}>
-            <CloseIcon fontSize="large" style={{ color: 'white' }} />
-          </Button>
-
-          {/* PDF and link */}
-          <div className="mainpart">
-            <div className="pdfcontainer">
-              <iframe
-                className="pdf"
-                src="https://drive.google.com/file/d/1yAUocidSGu05fnW2iRjO4XaJnlYz7QxO/preview"
-              />
-            </div>
-            <a className="sponsorlink" href="mailto:UBC.sponsorship@girlsinsteam.org">
-              Become a Sponsor
-            </a>
-          </div>
-        </div>
-      </dialog>
-
-      {/* Button to open dialog */}
       <Button
-        onClick={() => {
-          dialogRef.current?.showModal();
-        }}
+        onClick={togglePkg}
+        className="openButton"
         sx={{
           width: 300,
           height: 50,
@@ -59,6 +40,25 @@ export default function SponsorPkg() {
         variant="contained">
         Sponsorship Package
       </Button>
+
+      {isOpen && (
+        <div className="pkgContainer">
+          <div className="closeBtnContainer">
+            <Button className="closeButton" size="large" onClick={togglePkg}>
+              <CloseIcon fontSize="large" style={{ color: 'white' }} />
+            </Button>
+          </div>
+          <div className="PdfContainer">
+            <iframe
+              className="pdf"
+              src="https://drive.google.com/file/d/1yAUocidSGu05fnW2iRjO4XaJnlYz7QxO/preview"
+            />
+          </div>
+          <a className="sponsorlink" href="mailto:UBC.sponsorship@girlsinsteam.org">
+            Become a Sponsor
+          </a>
+        </div>
+      )}
     </div>
   );
 }

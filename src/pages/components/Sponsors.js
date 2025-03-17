@@ -10,6 +10,7 @@ import cima from '../images/CIMA+_logo_slogan_EN_2024_VERTICAL.png';
 import donut from '../images/LD_BRAND_FULL_NODATE_FIN_LRG.png';
 import coastal from '../images/coastal.png';
 import './../styles/SupportUs.css';
+import SponsorPkg from './SponsorPkg';
 
 export default function Sponsors() {
   // Array of sponsor logos
@@ -65,9 +66,9 @@ export default function Sponsors() {
               </div>
             </div>
             {/* Centered SponsorPkg */}
-            {/* <div className="SponsorPkgContainer">
-              <SponsorPkg id="sponsor-pkg" />
-            </div> */}
+            <div className="SponsorPkgContainer">
+              <SponsorPkg id="sponsor-pkg"></SponsorPkg>
+            </div>
           </div>
         </Grid>
       </Grid>
