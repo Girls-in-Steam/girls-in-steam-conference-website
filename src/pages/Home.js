@@ -10,7 +10,7 @@ import FAQ from './components/FAQ.js';
 import Agenda from './components/Agenda.js';
 // import Workshop from './components/Workshop.js';
 // import Panelist from './components/Panelist.js';
-// import KeyNote from './components/KeyNote.js';
+import KeyNote from './components/KeyNote.js';
 
 export default function Home() {
   return (
@@ -35,13 +35,13 @@ export default function Home() {
           <Agenda />
         </div>
       </div>
-      {/* <div className="KeyNote-Background" id="KeyNote">
+      <div className="KeyNote-Background" id="KeyNote">
         <div className="KeyNote-Component">
           <KeyNote />
         </div>
       </div>
 
-      <div className="Workshop-Background" id="KeyNote">
+      {/* <div className="Workshop-Background" id="KeyNote">
         <div className="Workshop-Component">
           <Workshop />
         </div>

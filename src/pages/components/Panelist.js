@@ -8,18 +8,23 @@ import DrAnnale from '../images/Dr.AnnaleeYassi.png';
 import AshianaSunderji from '../images/AshianaSunderji.jpeg';
 import CloverLee from '../images/CloverLee.jpg';
 import TasfiyahKabir from '../images/TasfiyahKabir.jpeg';
+//tech
 import EmilyWang from '../images/EmilyWang.jpg';
 import ShellyBadhesha from '../images/ShellyBadhesha.jpg';
 import VeronicaTan from '../images/VeronicaTan.png';
 import JessieMegan from '../images/JessieMegan.jpg';
+import MayaBruck from '../images/MayaBruck.jpeg';
+//eng
 import ArielleMurad from '../images/ArielleMurad.jpg';
 import TumiFabiyi from '../images/TumiFabiyi.jpg';
 import JessieRehwald from '../images/Jessie Rehwald.jpg';
+// arts
 import JulianneNieh from '../images/JulianneNieh.jpg';
 import BonnieLu from '../images/BonnieLu.jpeg';
 import TiffanyPotter from '../images/TiffanyPotter.jpeg';
 import KinwaBluesky from '../images/KinwaBluesky.jpeg';
 import JinLee from '../images/JinLee.png';
+//maths
 import AnaMucalica from '../images/AnaMucalica.jpg';
 import FaezehYazdi from '../images/FaezehYazdi.jpg';
 import TaraUbovic from '../images/TaraUbovic.jpg';
@@ -181,7 +186,7 @@ export default function Panelists() {
         'Oncology: Nutrition for Prevention, Department of Supportive Care, Radio Theranostics (currently), Neuro-oncology (2025 summer)'
     },
     {
-      name: 'placeholder',
+      name: 'Madyson Adams',
       role: 'placeholder',
       linkedinUrl: 'https://www.linkedin.com/in/janesmith/',
       imageUrl: 'https://via.placeholder.com/100',
@@ -224,11 +229,12 @@ export default function Panelists() {
         'The Impact of AI and Technology on Finance - How AI is transforming banking, investing, and financial decision-making. AI in Business and Consulting - How AI helps companies analyze data, predict trends, and make smarter decisions.'
     },
     {
-      name: 'Maya Bruck (Pro/Nouns)',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      name: 'Maya Bruck (She/Her)',
+      role: 'Lead Designer @ Mars Petcare',
+      linkedinUrl: 'https://www.linkedin.com/in/mayabruck/',
+      imageUrl: MayaBruck,
+      focusArea:
+        'Human and pet-centered design, digital product design for health and wellbeing, tools for predicting pet health, diversity, and traits'
     },
     {
       name: 'Veronica Tan (She/Her)',
@@ -361,7 +367,7 @@ export default function Panelists() {
         'Graph theory, particularly graph embeddings, games on graphs, graph coloring and domination'
     },
     {
-      name: 'tbd',
+      name: 'Dia Zavery',
       role: 'tbd',
       linkedinUrl: 'https://bxnnieblu.wixsite.com/portfolio',
       imageUrl: 'tbd',

@@ -95,7 +95,9 @@ export default function ButtonAppBar() {
             </MenuItem>
           ))}
           <MenuItem
-            onClick={() => window.open('https://linktr.ee/girlsinsteamorg', '_blank')}
+            onClick={() =>
+              window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8', '_blank')
+            }
             sx={{
               color: '#7D5390',
               backgroundColor: 'white',
