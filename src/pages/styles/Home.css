@@ -10,7 +10,7 @@ html {
 
 #App {
   text-align: center;
-  background-color: #6363ab;
+  background-color: rgb(109, 88, 174);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
