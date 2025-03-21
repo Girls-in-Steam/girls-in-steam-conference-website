@@ -102,15 +102,6 @@ export default function Workshop() {
     // Math
     {
       type: 'Math',
-      title: 'Mahsa Rad',
-      role: 'Mathematician',
-      organization: 'University of Mathland',
-      linkedin: 'https://www.linkedin.com/in/mathspeaker1',
-      keyFocus: 'Pure Mathematics, Number Theory, and Cryptography',
-      image: 'placeholder' // Use the imported image
-    },
-    {
-      type: 'Math',
       title: 'Faezeh Yazd (She/Her)',
       role: 'Postdoctoral Fellow, Department of Statistics and Actuarial Science',
       organization: 'SFU.',
@@ -149,7 +140,6 @@ export default function Workshop() {
     <Box
       sx={{
         padding: isMobile ? '20px 10px' : '40px 20px', // Adjust padding for mobile
-        background: 'radial-gradient(circle, #5e5e7f, #57579F, #584D7A)', // New radial gradient
         borderRadius: '10px',
         color: '#FFF',
         width: '100%', // Span the entire page width
@@ -220,9 +210,9 @@ export default function Workshop() {
               <Box
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', // Single column for mobile
+                  gridTemplateColumns: isMobile || group.length === 1 ? '1fr' : 'repeat(2, 1fr)', // Single column for mobile or single workshop
                   gap: '10px', // Reduced gap between squares
-                  justifyContent: 'center', // Center the grid items
+                  justifyContent: group.length === 1 ? 'center' : 'normal', // Center if only one workshop
                   width: 'fit-content', // Fit content width
                   margin: '0 auto' // Center the grid
                 }}>

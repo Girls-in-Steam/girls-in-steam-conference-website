@@ -4,6 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
 import { useInView } from 'react-intersection-observer'; // Import the hook
 import Ashley from '../images/AshleyKairu.JPG';
 import FarahSamli from '../images/FarahSamli.jpeg';
+import './../styles/KeyNote.css';
 
 export default function KeyNote() {
   // Use the useInView hook to detect when the section is in view
@@ -16,7 +17,6 @@ export default function KeyNote() {
     <Box
       ref={ref} // Attach the ref to the section
       sx={{
-        background: 'radial-gradient(circle, #5E5E7F, #7777BF, #5E5E7F)',
         padding: '40px 20px',
         borderRadius: '10px',
         color: '#FFF'
