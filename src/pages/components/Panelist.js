@@ -8,6 +8,8 @@ import DrAnnale from '../images/Dr.AnnaleeYassi.png';
 import AshianaSunderji from '../images/AshianaSunderji.jpeg';
 import CloverLee from '../images/CloverLee.jpg';
 import TasfiyahKabir from '../images/TasfiyahKabir.jpeg';
+import MadysonAdams from '../images/madysonadams.jpeg';
+import JuliaHill from '../images/JuliaHill.jpg';
 //tech
 import EmilyWang from '../images/EmilyWang.jpg';
 import ShellyBadhesha from '../images/ShellyBadhesha.jpg';
@@ -15,6 +17,7 @@ import VeronicaTan from '../images/VeronicaTan.png';
 import JessieMegan from '../images/JessieMegan.jpg';
 import MayaBruck from '../images/MayaBruck.jpeg';
 //eng
+import Layla from '../images/Layla.jpeg';
 import ArielleMurad from '../images/ArielleMurad.jpg';
 import TumiFabiyi from '../images/TumiFabiyi.jpg';
 import JessieRehwald from '../images/Jessie Rehwald.jpg';
@@ -29,6 +32,7 @@ import AnaMucalica from '../images/AnaMucalica.jpg';
 import FaezehYazdi from '../images/FaezehYazdi.jpg';
 import TaraUbovic from '../images/TaraUbovic.jpg';
 import MacKenzieCarr from '../images/MacKenzieCarr.jpg';
+import Dia from '../images/Dia.jpeg';
 
 export default function Panelists() {
   // Function to render a single panelist square with scroll animation
@@ -143,7 +147,7 @@ export default function Panelists() {
             </React.Fragment>
           ))}
         </Box>
-        {/* Bottom Row (2 panelists) */}
+        {/* Bottom Row (3 panelists) */}
         <Box
           sx={{
             display: 'flex',
@@ -151,7 +155,7 @@ export default function Panelists() {
             gap: '20px',
             flexWrap: 'wrap'
           }}>
-          {panelists.slice(3, 5).map((panelist, index) => (
+          {panelists.slice(3, 6).map((panelist, index) => (
             <React.Fragment key={index}>
               {renderPanelistSquare(
                 panelist.name,
@@ -186,11 +190,13 @@ export default function Panelists() {
         'Oncology: Nutrition for Prevention, Department of Supportive Care, Radio Theranostics (currently), Neuro-oncology (2025 summer)'
     },
     {
-      name: 'Madyson Adams',
-      role: 'placeholder',
-      linkedinUrl: 'https://www.linkedin.com/in/janesmith/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'placeholder'
+      name: 'Madyson Adams (She/Her)',
+      role: 'Environmental Technician role @ City of North Vancouver.',
+      linkedinUrl:
+        'https://www.linkedin.com/in/madyson-adams-15149996/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      imageUrl: MadysonAdams,
+      focusArea:
+        'Invasive species management, habitat assessment, wetland assessment, salmon habitat restoration & conservation, community engagement & fostering youth interest in STEM, restoration planning'
     },
     {
       name: 'Clover Lee (They/Them)',
@@ -201,12 +207,19 @@ export default function Panelists() {
         'Critical public health nutrition and food anthropology from social justice perspectives'
     },
     {
-      name: 'Tasfiyah Kabir',
+      name: 'Tasfiyah Kabir(She/Her)',
       role: "Research Assistant, BC Children's Hospital (Janssen Lab, Play Outside Lab)",
       linkedinUrl: 'https://www.linkedin.com/in/tasfiyah/',
       imageUrl: TasfiyahKabir,
       focusArea:
         'International Migration Patterns of Nurses and Physicians in Canada, Global Health Policy: Organization & Behaviour in Emergency Care Services,Pharmacogenomic Influences on Major Depressive Disorder (MDD) Treatment'
+    },
+    {
+      name: 'Julia Marie Hill(She/Her)',
+      role: 'Research and Innovation Manager, Health @ Genome BC',
+      linkedinUrl: 'https://www.linkedin.com/in/julia-m-hill/?originalSubdomain=ca',
+      imageUrl: JuliaHill,
+      focusArea: 'Human health and disease/drug discovery/medical devices/genomics'
     }
   ];
 
@@ -255,11 +268,12 @@ export default function Panelists() {
   const engineeringPanelists = [
     // Add 5 panelists for Engineering
     {
-      name: 'Layal Jbara',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/rachelgreen/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
+      name: 'Layal Jbara (She/Her)',
+      role: 'PhD Candidate in Chemical and Biological Engineering and Graduate Research Assistant @ UBC',
+      linkedinUrl: 'https://www.linkedin.com/in/layal-jbara-612394a8/',
+      imageUrl: Layla,
+      focusArea:
+        'Numerical simulations, computational fluid dynamics (CFD), high-performance computing (HPC), and machine learning'
     },
     {
       name: 'Arielle Murad (She/Her)',
@@ -284,13 +298,6 @@ export default function Panelists() {
       imageUrl: JessieRehwald,
       focusArea:
         'Engineering, the environment, and urbanism, with a strong interest in how these fields intersect. '
-    },
-    {
-      name: 'Demir Buse',
-      role: 'tbd',
-      linkedinUrl: 'https://www.linkedin.com/in/michaellee/',
-      imageUrl: 'https://via.placeholder.com/100',
-      focusArea: 'tbd'
     }
   ];
 
@@ -352,7 +359,7 @@ export default function Panelists() {
         'Computer model (simulator) calibration, Emulation and uncertainty quantification, Experimental design and advanced statistical methods'
     },
     {
-      name: 'Tara Ubovic',
+      name: 'Tara Ubovic (She/Her)',
       role: 'Statistical Analyst - Project Assistant @ NEBLab',
       linkedinUrl: 'https://www.linkedin.com/in/tara-ubovic/',
       imageUrl: TaraUbovic,
@@ -367,18 +374,17 @@ export default function Panelists() {
         'Graph theory, particularly graph embeddings, games on graphs, graph coloring and domination'
     },
     {
-      name: 'Dia Zavery',
-      role: 'tbd',
-      linkedinUrl: 'https://bxnnieblu.wixsite.com/portfolio',
-      imageUrl: 'tbd',
-      focusArea: 'tbd'
+      name: 'Dia Zavery (She/Her)',
+      role: 'Business Intelligence Analyst Co-op @ WorkSafeBC',
+      linkedinUrl: 'https://www.linkedin.com/in/dia-zavery/?originalSubdomain=ca',
+      imageUrl: Dia,
+      focusArea: 'AI-driven automation, financial analytics, and market research'
     }
   ];
 
   return (
     <Box
       sx={{
-        background: 'linear-gradient(to bottom, #564F7D, #6363AB)', // Vertical gradient
         padding: '40px 20px',
         borderRadius: '10px',
         color: '#FFF',

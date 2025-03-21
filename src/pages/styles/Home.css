@@ -52,12 +52,14 @@ html {
 }
 
 .Workshop-Background {
-  background-image: linear-gradient(#5e5e7f, #584d7a);
+  background-image: linear-gradient(#5e5e7f, #57579F, #564F7D);
   min-height: 200px;
+  padding: 5%;
 }
 .Panelist-Background {
-  background-image: #5e5e7f;
+  background-image: linear-gradient(#564F7D, #6363AB);
   min-height: 200px;
+  padding-top: 5%;
 }
 .Sponsor-FAQ-Team-Background {
   background-image: linear-gradient(#6363ab, #5a4067);

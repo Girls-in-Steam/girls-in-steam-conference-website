@@ -24,7 +24,11 @@ export default function ButtonAppBar() {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    window.location.href = `#${tab}`; // Scrolls to the tab's section
+    const sectionId = tab === 'Home' ? 'Hero' : tab;
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+    }
     handleMenuClose(); // Close menu after clicking
   };
 
@@ -76,7 +80,6 @@ export default function ButtonAppBar() {
         </IconButton>
 
         {/* Mobile Navbar Menu */}
-        {/* Mobile Navbar Menu */}
         <Menu
           id="menu"
           anchorEl={anchorEl}
@@ -89,11 +92,13 @@ export default function ButtonAppBar() {
               color: 'black' // Ensure text remains visible
             }
           }}>
-          {['Home', 'About', 'Agenda', 'Sponsors', 'FAQ'].map((tab) => (
-            <MenuItem key={tab} onClick={() => handleTabChange(tab === 'Home' ? 'Hero' : tab)}>
-              {tab}
-            </MenuItem>
-          ))}
+          {['Home', 'About', 'Agenda', 'KeyNote', 'Workshops', 'Panelist', 'Sponsors', 'FAQ'].map(
+            (tab) => (
+              <MenuItem key={tab} onClick={() => handleTabChange(tab === 'Home' ? 'Hero' : tab)}>
+                {tab}
+              </MenuItem>
+            )
+          )}
           <MenuItem
             onClick={() =>
               window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8', '_blank')
@@ -118,22 +123,24 @@ export default function ButtonAppBar() {
             overflow: 'hidden',
             paddingLeft: '10px'
           }}>
-          {['Home', 'About', 'Agenda', 'Sponsors', 'FAQ'].map((tab) => (
-            <Button
-              key={tab}
-              onClick={() => handleTabChange(tab === 'Home' ? 'Hero' : tab)}
-              sx={{
-                textTransform: 'none',
-                mx: 2,
-                fontSize: '1.2rem',
-                backgroundColor: 'transparent',
-                color: activeTab === tab ? 'white' : 'lightgrey',
-                fontWeight: 700,
-                '&:hover': { color: 'white', textDecoration: 'underline' }
-              }}>
-              {tab}
-            </Button>
-          ))}
+          {['Home', 'About', 'Agenda', 'KeyNote', 'Workshops', 'Panelist', 'Sponsors', 'FAQ'].map(
+            (tab) => (
+              <Button
+                key={tab}
+                onClick={() => handleTabChange(tab === 'Home' ? 'Hero' : tab)}
+                sx={{
+                  textTransform: 'none',
+                  mx: 2,
+                  fontSize: '1.2rem',
+                  backgroundColor: 'transparent',
+                  color: activeTab === tab ? 'white' : 'lightgrey',
+                  fontWeight: 700,
+                  '&:hover': { color: 'white', textDecoration: 'underline' }
+                }}>
+                {tab}
+              </Button>
+            )
+          )}
           <Button
             onClick={() =>
               window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8', '_blank')

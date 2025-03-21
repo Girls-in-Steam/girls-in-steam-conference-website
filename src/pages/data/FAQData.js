@@ -1,7 +1,7 @@
 export const execTeamFAQData = [
   {
     question: 'How much are tickets for the event?',
-    answer: `Early Bird Tickets and GIS Members Tickets are $20, Regular are $30, Late Tickets are $35`
+    answer: `Early Bird Tickets and GIS Members Tickets are $10, Regular are $30, Late Tickets are $15`
   },
   {
     question: 'Will food be provided at the event?',
