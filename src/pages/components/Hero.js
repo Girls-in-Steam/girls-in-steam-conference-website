@@ -117,7 +117,9 @@ export default function Hero() {
           <Button
             onClick={() => {
               console.log('Button clicked');
-              window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8');
+              window.open(
+                'https://docs.google.com/forms/d/e/1FAIpQLSfHzIv94vHN2GUgBvjKrfsPwtj0EWYL9mVN4gkchY4X0PLZFQ/viewform'
+              );
             }}
             sx={{
               width: 180,
@@ -136,7 +138,7 @@ export default function Hero() {
               }
             }}
             variant="contained">
-            Buy Tickets
+            RSVP NOW
           </Button>
           <Button
             onClick={() => {
