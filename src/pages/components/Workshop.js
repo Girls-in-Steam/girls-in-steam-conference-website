@@ -13,6 +13,7 @@ import HarmanpreetKaur from '../images/HarmanpreetKaur.jpeg';
 import Flavia from '../images/Flavia.jpg';
 import MichelleChan from '../images/MichelleChan.jpeg';
 import FaezehYazdi from '../images/FaezehYazdi.jpg';
+import Parnian from '../images/Parnian.jpeg';
 
 export default function Workshop() {
   const theme = useTheme();
@@ -109,6 +110,16 @@ export default function Workshop() {
       keyFocus:
         'Computer model (simulator) calibration, Emulation and uncertainty quantification, Experimental design and advanced statistical methods',
       image: FaezehYazdi // Use the imported image
+    },
+    {
+      type: 'Math',
+      title: 'Parnian Rezaei (She/Her)',
+      role: 'Quantitative Researcher',
+      organization: 'SFU Department of Statistics and Actuarial Science.',
+      linkedin: 'https://www.linkedin.com/in/parnian-rezaei/?originalSubdomain=ca',
+      keyFocus:
+        'Mathematics behind financial systems, blending theory and real- world application to drive meaningful insights and support sound financial decision-making',
+      image: Parnian // Use the imported image
     }
   ];
 
