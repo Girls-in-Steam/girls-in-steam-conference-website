@@ -251,12 +251,13 @@ export default function Workshop() {
                           marginBottom: '10px',
                           fontWeight: 'bold'
                         }}>
-                        {index === 0
-                          ? '11:00 AM - 12:00 PM' // Left box
-                          : groupIndex === 0 || groupIndex === 3 || groupIndex === 4
-                            ? '1:30 PM - 2:30 PM' // 1, 4, 5 right boxes
-                            : '12:00 PM - 1:00 PM'}{' '}
-                        {/* Second and third right boxes */}
+                        {workshop.type === 'Math'
+                          ? '1:30 PM - 2:30 PM'
+                          : index === 0
+                            ? '11:00 AM - 12:00 PM'
+                            : groupIndex === 0 || groupIndex === 3 || groupIndex === 4
+                              ? '1:30 PM - 2:30 PM'
+                              : '12:00 PM - 1:00 PM'}
                       </Typography>
                       {/* Workshop square */}
                       <Box
