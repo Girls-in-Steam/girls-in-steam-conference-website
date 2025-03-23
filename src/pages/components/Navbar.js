@@ -101,14 +101,17 @@ export default function ButtonAppBar() {
           )}
           <MenuItem
             onClick={() =>
-              window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8', '_blank')
+              window.open(
+                'https://docs.google.com/forms/d/e/1FAIpQLSfHzIv94vHN2GUgBvjKrfsPwtj0EWYL9mVN4gkchY4X0PLZFQ/viewform',
+                '_blank'
+              )
             }
             sx={{
               color: '#7D5390',
               backgroundColor: 'white',
               textAlign: 'center'
             }}>
-            Buy Tickets
+            RSVP NOW
           </MenuItem>
         </Menu>
 
@@ -143,7 +146,10 @@ export default function ButtonAppBar() {
           )}
           <Button
             onClick={() =>
-              window.open('https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8', '_blank')
+              window.open(
+                'https://docs.google.com/forms/d/e/1FAIpQLSfHzIv94vHN2GUgBvjKrfsPwtj0EWYL9mVN4gkchY4X0PLZFQ/viewform',
+                '_blank'
+              )
             }
             sx={{
               backgroundColor: '#7D5390',
@@ -154,7 +160,7 @@ export default function ButtonAppBar() {
               '&:hover': { boxShadow: '0 0 15px white' }
             }}
             variant="contained">
-            Buy Tickets
+            RSVP NOW
           </Button>
         </div>
       </Toolbar>

@@ -1,7 +1,7 @@
 export const execTeamFAQData = [
   {
     question: 'How much are tickets for the event?',
-    answer: `Early Bird Tickets and GIS Members Tickets are $10, Regular are $30, Late Tickets are $15`
+    answer: `The event is free!`
   },
   {
     question: 'Will food be provided at the event?',
@@ -21,7 +21,7 @@ export const execTeamFAQData = [
       <>
         You can register online{' '}
         <a
-          href="https://www.bouncelife.com/events/67a6e2324801cd5a252d1aa8"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHzIv94vHN2GUgBvjKrfsPwtj0EWYL9mVN4gkchY4X0PLZFQ/viewform"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: '#D0CDEA', textDecoration: 'underline' }} // White color and underline

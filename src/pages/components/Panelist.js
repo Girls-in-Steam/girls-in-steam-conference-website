@@ -351,7 +351,7 @@ export default function Panelists() {
         'Computation and physical analysis of particle-laden blood flow in the microvasculature'
     },
     {
-      name: 'Faezeh Yazdi (She/Her)',
+      name: 'Dr. Faezeh Yazdi (She/Her)',
       role: 'Postdoctoral Fellow, Department of Statistics and Actuarial Science @ SFU',
       linkedinUrl: 'https://www.linkedin.com/in/faezeh-yazdi-3983787a/',
       imageUrl: FaezehYazdi,

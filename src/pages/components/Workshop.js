@@ -103,7 +103,7 @@ export default function Workshop() {
     // Math
     {
       type: 'Math',
-      title: 'Faezeh Yazd (She/Her)',
+      title: 'Dr. Faezeh Yazd (She/Her)',
       role: 'Postdoctoral Fellow, Department of Statistics and Actuarial Science',
       organization: 'SFU.',
       linkedin: 'https://www.linkedin.com/in/faezeh-yazdi-3983787a/',
