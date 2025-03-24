@@ -1,17 +1,41 @@
 import React from 'react';
-import { Typography, Box, IconButton } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
+import { Typography, Box, useMediaQuery, useTheme } from '@mui/material';
 import { useInView } from 'react-intersection-observer'; // Import the hook
 import Ashley from '../images/AshleyKairu.JPG';
 import FarahSamli from '../images/FarahSamli.jpeg';
 import './../styles/KeyNote.css';
+import SpeakerCard from './SpeakerCard';
 
 export default function KeyNote() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   // Use the useInView hook to detect when the section is in view
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     triggerOnce: true, // Only trigger the animation once
     threshold: 0.5 // Trigger when 50% of the section is visible
   });
+
+  const keynotes = [
+    {
+      type: 'Opening Keynote',
+      topic: 'From Concept to Impact: The Intersection of STEAM, Equity & Leadership',
+      title: 'Ashley Kairu (She/Her)',
+      role: 'Process Engineer (Unilia Fuel Cells Inc.), Founder (BIPOC Women’s Society)',
+      linkedin: 'https://www.linkedin.com/in/ashleykairu/',
+      keyFocus: 'Catalyst coated membranes for fuel cell applications for heavy-duty vehicles',
+      image: Ashley
+    },
+    {
+      type: 'Closing Keynote',
+      title: 'E.Farah Samli',
+      topic: 'Bring Your Voice',
+      role: 'Independent Contractor (PhD, Immunology and Vaccine Delivery, BS, Applied Biological Sciences) + TEDx Speaker',
+      linkedin: 'https://www.linkedin.com/in/efsamli/',
+      keyFocus:
+        'Vaccine development and commercialization, Biomedical research and innovation, Change management and strategic planning',
+      image: FarahSamli
+    }
+  ];
 
   return (
     <Box
@@ -20,6 +44,7 @@ export default function KeyNote() {
         padding: '40px 20px',
         borderRadius: '10px',
         color: '#FFF'
+        // minHeight: '100vh' // Ensure the gradient covers the entire page height
       }}>
       <Typography
         variant="h3"
@@ -28,10 +53,11 @@ export default function KeyNote() {
           color: '#E8C3D1',
           fontFamily: 'Josefin Sans',
           fontWeight: 'bold',
-          marginBottom: '20px'
+          marginBottom: '40px'
         }}>
         KEYNOTE
       </Typography>
+      <Box sx={{ marginBottom: '40px' }}></Box>
       <Box
         sx={{
           display: 'flex',
@@ -39,165 +65,83 @@ export default function KeyNote() {
           gap: '20px',
           flexWrap: 'wrap'
         }}>
-        {/* First Square */}
         <Box
           sx={{
-            width: '400px',
-            height: 'auto',
-            backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
-            borderRadius: '10px',
-            padding: '20px',
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center', // Center the image and name
-            textAlign: 'center', // Left-align the rest of the text
-            opacity: inView ? 1 : 0, // Fade in when in view
-            transform: inView ? 'translateY(0)' : 'translateY(50px)', // Slide up when in view
-            transition: 'opacity 1s ease, transform 1s ease' // Smooth transition
-          }}>
-          {/* Label: Opening Keynote */}
-          <Typography
-            variant="h5"
-            sx={{
-              textAlign: 'center',
-              color: '#fff',
-              fontFamily: 'Josefin Sans',
-              fontWeight: 'bold',
-              marginBottom: '10px'
-            }}>
-            Opening Keynote
-          </Typography>
-          {/* Circular Picture */}
-          <Box
-            sx={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              backgroundColor: '#FFF', // Placeholder for the image
-              marginBottom: '10px',
-              overflow: 'hidden'
-            }}>
-            <img
-              src={Ashley}
-              alt="Ashley Kairu"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          </Box>
-          {/* Name and LinkedIn Icon */}
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              marginBottom: '10px'
-            }}>
-            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
-              Ashley Kairu (She/Her)
-            </Typography>
-            <IconButton
-              href="https://www.linkedin.com/in/ashleykairu/" // Replace with actual LinkedIn URL
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: '#0A66C2' }}>
-              <LinkedInIcon />
-            </IconButton>
-          </Box>
-          {/* Left-Aligned Text */}
-          <Typography
-            variant="body1"
-            sx={{ marginBottom: '10px', textAlign: 'center', color: '#fff' }}>
-            Process Engineer (Unilia Fuel Cells Inc.), Founder (BIPOC Women’s Society)
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ marginBottom: '10px', textAlign: 'center', fontWeight: 'bold', color: '#fff' }}>
-            Key Focus Area/Research Interest:
-          </Typography>
-          <Typography variant="body2" sx={{ textAlign: 'center', color: '#fff' }}>
-            Catalyst coated membranes for fuel cell applications for heavy-duty vehicles
-          </Typography>
-        </Box>
+            justifyContent: 'center',
+            gap: '20px',
+            flexWrap: 'wrap',
+            marginBottom: '20px'
+          }}></Box>
+        {keynotes.map((keynote, index) => {
+          const { ref, inView } = useInView({
+            triggerOnce: true, // Only trigger the animation once
+            threshold: 0.1 // Trigger when 10% of the element is visible
+          });
 
-        {/* Second Square */}
-        <Box
-          sx={{
-            width: '400px',
-            height: 'auto',
-            backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
-            borderRadius: '10px',
-            padding: '20px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center', // Center the image and name
-            textAlign: 'center', // Left-align the rest of the text
-            opacity: inView ? 1 : 0, // Fade in when in view
-            transform: inView ? 'translateY(0)' : 'translateY(50px)', // Slide up when in view
-            transition: 'opacity 1s ease, transform 1s ease' // Smooth transition
-          }}>
-          {/* Label: Closing Keynote */}
-          <Typography
-            variant="h5"
-            sx={{
-              textAlign: 'center',
-              color: '#fff',
-              fontFamily: 'Josefin Sans',
-              fontWeight: 'bold',
-              marginBottom: '10px'
-            }}>
-            Closing Keynote
-          </Typography>
-          {/* Circular Picture */}
-          <Box
-            sx={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              backgroundColor: '#FFF', // Placeholder for the image
-              marginBottom: '10px',
-              overflow: 'hidden'
-            }}>
-            <img
-              src={FarahSamli} // Replace with actual image URL
-              alt="Farah Samli"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          </Box>
-          {/* Name and LinkedIn Icon */}
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              marginBottom: '10px'
-            }}>
-            <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
-              E.Farah Samli
-            </Typography>
-            <IconButton
-              href="https://www.linkedin.com/in/efsamli/" // Replace with actual LinkedIn URL
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: '#0A66C2' }}>
-              <LinkedInIcon />
-            </IconButton>
-          </Box>
-          {/* Left-Aligned Text */}
-          <Typography
-            variant="body1"
-            sx={{ marginBottom: '10px', textAlign: 'center', color: '#fff' }}>
-            Independent Contractor (PhD, Immunology and Vaccine Delivery, BS, Applied Biological
-            Sciences) + TEDx Speaker
-          </Typography>
-          <Typography
-            variant="body2"
-            sx={{ fontStyle: 'italic', textAlign: 'center', fontWeight: 'bold', color: '#fff' }}>
-            Key Focus Areas/Research Interest:
-          </Typography>
-          <Typography variant="body2" sx={{ textAlign: 'center', color: '#fff' }}>
-            Vaccine development and commercialization, Biomedical research and innovation, Change
-            management and strategic planning
-          </Typography>
-        </Box>
+          return (
+            <Box
+              key={index}
+              ref={ref}
+              sx={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0)' : 'translateY(20px)',
+                transition: 'opacity 0.5s ease-out, transform 0.5s ease-out'
+              }}>
+              {/* type */}
+              <Box
+                sx={{
+                  width: isMobile ? '80dvw' : '325px',
+                  paddingLeft: '20px',
+                  paddingRight: '20px'
+                }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    textAlign: 'center',
+                    color: '#FFF',
+                    marginBottom: '10px',
+                    fontWeight: 'bold'
+                  }}>
+                  {keynote.type}
+                </Typography>
+
+                {/* topic */}
+                <Box
+                  sx={{
+                    height: isMobile ? 'auto' : '50px', //to align top of card
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      textAlign: 'center',
+                      color: '#FFF',
+                      marginBottom: '10px',
+                      fontWeight: 'regular',
+                      fontStyle: 'italic'
+                    }}>
+                    {'Topic: ' + keynote.topic}
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/* Keynote square */}
+              <React.Fragment>
+                {
+                  <SpeakerCard
+                    name={keynote.title}
+                    role={keynote.role}
+                    linkedinUrl={keynote.linkedin}
+                    imageUrl={keynote.image}
+                    focusArea={keynote.keyFocus}></SpeakerCard>
+                }
+              </React.Fragment>
+            </Box>
+          );
+        })}
       </Box>
     </Box>
   );
