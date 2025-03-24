@@ -1,7 +1,7 @@
 import React from 'react';
-import { Typography, Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
+import { Typography, Box } from '@mui/material';
 import { useInView } from 'react-intersection-observer'; // Import useInView hook
+import SpeakerCard from './SpeakerCard';
 
 // Import images
 import FarahSamli from '../images/FarahSamli.jpeg';
@@ -16,9 +16,6 @@ import FaezehYazdi from '../images/FaezehYazdi.jpg';
 import Parnian from '../images/Parnian.jpeg';
 
 export default function Workshop() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Check if the screen is mobile-sized
-
   // Example data for workshops
   const workshops = [
     // Science
@@ -150,20 +147,19 @@ export default function Workshop() {
   return (
     <Box
       sx={{
-        padding: isMobile ? '20px 10px' : '40px 20px', // Adjust padding for mobile
+        padding: '40px 20px',
         borderRadius: '10px',
         color: '#FFF',
-        width: '100%', // Span the entire page width
-        boxSizing: 'border-box' // Ensure padding is included in the width
+        minHeight: '100vh' // Ensure the gradient covers the entire page height
       }}>
       <Typography
-        variant={isMobile ? 'h4' : 'h3'} // Adjust font size for mobile
+        variant="h3"
         sx={{
           textAlign: 'center',
           color: '#E8C3D1',
           fontFamily: 'Josefin Sans',
           fontWeight: 'bold',
-          marginBottom: '20px'
+          marginBottom: '40px'
         }}>
         STEAM WORKSHOPS
       </Typography>
@@ -189,28 +185,18 @@ export default function Workshop() {
           from sponsors & partners which will be set up in Location TBD.
         </Typography>
       </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '40px', // Space between groups
-          maxWidth: '1200px', // Limit the width of the grid
-          margin: '0 auto', // Center the grid
-          width: '100%' // Span the entire width
-        }}>
+      <Box sx={{ marginBottom: '40px' }}>
         {groupedWorkshops.map((group, groupIndex) => {
           const { emoji, location } = getWorkshopDetails(group[0].type); // Get emoji and location for the group
           return (
-            <Box key={groupIndex}>
-              {/* Text above the pair of workshops */}
+            <Box key={groupIndex} sx={{ marginBottom: '40px' }}>
               <Typography
-                variant={isMobile ? 'h6' : 'h5'} // Adjust font size for mobile
+                variant="h5"
                 sx={{
                   textAlign: 'center',
                   color: '#fff',
                   fontFamily: 'Josefin Sans',
-                  fontWeight: 'bold',
-                  marginBottom: '10px'
+                  marginBottom: '20px'
                 }}>
                 {emoji} {group[0].type} Workshops{' '}
                 <Typography component="span" sx={{ fontStyle: 'italic' }}>
@@ -220,12 +206,11 @@ export default function Workshop() {
               {/* Workshop pair */}
               <Box
                 sx={{
-                  display: 'grid',
-                  gridTemplateColumns: isMobile || group.length === 1 ? '1fr' : 'repeat(2, 1fr)', // Single column for mobile or single workshop
-                  gap: '10px', // Reduced gap between squares
-                  justifyContent: group.length === 1 ? 'center' : 'normal', // Center if only one workshop
-                  width: 'fit-content', // Fit content width
-                  margin: '0 auto' // Center the grid
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: '20px',
+                  flexWrap: 'wrap',
+                  marginBottom: '20px'
                 }}>
                 {group.map((workshop, index) => {
                   const { ref, inView } = useInView({
@@ -260,67 +245,16 @@ export default function Workshop() {
                               : '12:00 PM - 1:00 PM'}
                       </Typography>
                       {/* Workshop square */}
-                      <Box
-                        sx={{
-                          backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
-                          borderRadius: '10px',
-                          padding: '20px',
-                          textAlign: 'center',
-                          color: '#FFF',
-                          width: isMobile ? '100%' : '400px', // Full width on mobile
-                          height: isMobile ? 'auto' : '350px', // Auto height on mobile
-                          display: 'flex',
-                          flexDirection: 'column',
-                          alignItems: 'center', // Center the image and text
-                          position: 'relative' // For the vertical line
-                        }}>
-                        {/* Circular Photo */}
-                        <Box
-                          sx={{
-                            width: '100px',
-                            height: '100px',
-                            borderRadius: '50%',
-                            backgroundColor: '#FFF', // Placeholder for the image
-                            marginBottom: '10px',
-                            overflow: 'hidden'
-                          }}>
-                          <img
-                            src={workshop.image} // Use the imported image
-                            alt={workshop.title}
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                          />
-                        </Box>
-                        {/* Name and LinkedIn Icon */}
-                        <Box
-                          sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '10px',
-                            marginBottom: '10px'
-                          }}>
-                          <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
-                            {workshop.title}
-                          </Typography>
-                          <IconButton
-                            href={workshop.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            sx={{ color: '#0A66C2', padding: '0' }}>
-                            <LinkedInIcon />
-                          </IconButton>
-                        </Box>
-                        {/* Role and Organization */}
-                        <Typography variant="body1" sx={{ marginBottom: '10px' }}>
-                          {workshop.role} ({workshop.organization})
-                        </Typography>
-                        {/* Key Focus Area/Research Interest */}
-                        <Typography
-                          variant="body1"
-                          sx={{ fontStyle: 'italic', marginBottom: '10px' }}>
-                          Key Focus Area/Research Interest:
-                        </Typography>
-                        <Typography variant="body1">{workshop.keyFocus}</Typography>
-                      </Box>
+                      <React.Fragment>
+                        {
+                          <SpeakerCard
+                            name={workshop.title}
+                            role={workshop.role + ' (' + workshop.organization + ')'}
+                            linkedinUrl={workshop.linkedin}
+                            imageUrl={workshop.image}
+                            focusArea={workshop.keyFocus}></SpeakerCard>
+                        }
+                      </React.Fragment>
                     </Box>
                   );
                 })}

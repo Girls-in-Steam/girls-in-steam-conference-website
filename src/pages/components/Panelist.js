@@ -1,7 +1,6 @@
 import React from 'react';
-import { Typography, Box, IconButton } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
-import { useInView } from 'react-intersection-observer'; // Import useInView hook
+import { Typography, Box } from '@mui/material';
+import SpeakerCard from './SpeakerCard';
 
 // Import images
 import DrAnnale from '../images/Dr.AnnaleeYassi.png';
@@ -35,140 +34,127 @@ import MacKenzieCarr from '../images/MacKenzieCarr.jpg';
 import Dia from '../images/Dia.jpeg';
 
 export default function Panelists() {
-  // Function to render a single panelist square with scroll animation
-  const renderPanelistSquare = (name, role, linkedinUrl, imageUrl, focusArea) => {
-    const { ref, inView } = useInView({
-      triggerOnce: true, // Only trigger the animation once
-      threshold: 0.1 // Trigger when 10% of the element is visible
-    });
-
-    return (
-      <Box
-        ref={ref}
-        sx={{
-          width: '400px',
-          height: 'auto',
-          backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
-          borderRadius: '10px',
-          padding: '20px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center', // Center the image and name
-          textAlign: 'center', // Left-align the rest of the text
-          opacity: inView ? 1 : 0,
-          transform: inView ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'opacity 0.5s ease-out, transform 0.5s ease-out'
-        }}>
-        {/* Circular Picture */}
-        <Box
-          sx={{
-            width: '100px',
-            height: '100px',
-            borderRadius: '50%',
-            backgroundColor: '#FFF', // Placeholder for the image
-            marginBottom: '10px',
-            overflow: 'hidden'
-          }}>
-          <img
-            src={imageUrl}
-            alt={name}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        </Box>
-        {/* Name and LinkedIn Icon */}
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            marginBottom: '10px'
-          }}>
-          <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
-            {name}
-          </Typography>
-          <IconButton
-            href={linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ color: '#0A66C2' }}>
-            <LinkedInIcon />
-          </IconButton>
-        </Box>
-        {/* Left-Aligned Text */}
-        <Typography
-          variant="body1"
-          sx={{ marginBottom: '10px', textAlign: 'center', color: '#fff' }}>
-          {role}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ marginBottom: '10px', textAlign: 'center', fontWeight: 'bold', color: '#fff' }}>
-          Key Focus Area/Research Interest:
-        </Typography>
-        <Typography variant="body2" sx={{ textAlign: 'center', color: '#fff' }}>
-          {focusArea}
-        </Typography>
-      </Box>
-    );
-  };
-
   // Function to render a panel section
   const renderPanelSection = (title, panelists) => {
-    return (
-      <Box sx={{ marginBottom: '40px' }}>
-        <Typography
-          variant="h5"
-          sx={{
-            textAlign: 'center',
-            color: '#fff',
-            fontFamily: 'Josefin Sans',
-            marginBottom: '20px'
-          }}>
-          {title}
-        </Typography>
-        {/* Top Row (3 panelists) */}
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '20px',
-            flexWrap: 'wrap',
-            marginBottom: '20px'
-          }}>
-          {panelists.slice(0, 3).map((panelist, index) => (
-            <React.Fragment key={index}>
-              {renderPanelistSquare(
-                panelist.name,
-                panelist.role,
-                panelist.linkedinUrl,
-                panelist.imageUrl,
-                panelist.focusArea
-              )}
-            </React.Fragment>
-          ))}
+    // all but engineering
+    if (panelists.length >= 5) {
+      return (
+        <Box sx={{ marginBottom: '40px' }}>
+          <Typography
+            variant="h5"
+            sx={{
+              textAlign: 'center',
+              color: '#fff',
+              fontFamily: 'Josefin Sans',
+              marginBottom: '20px'
+            }}>
+            {title}
+          </Typography>
+          {/* Top Row (3 panelists) */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '20px',
+              flexWrap: 'wrap',
+              marginBottom: '20px'
+            }}>
+            {panelists.slice(0, 3).map((panelist, index) => (
+              <React.Fragment key={index}>
+                {
+                  <SpeakerCard
+                    name={panelist.name}
+                    role={panelist.role}
+                    linkedinUrl={panelist.linkedinUrl}
+                    imageUrl={panelist.imageUrl}
+                    focusArea={panelist.focusArea}></SpeakerCard>
+                }
+              </React.Fragment>
+            ))}
+          </Box>
+          {/* Bottom Row (3 panelists) */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '20px',
+              flexWrap: 'wrap'
+            }}>
+            {panelists.slice(3, 6).map((panelist, index) => (
+              <React.Fragment key={index}>
+                {
+                  <SpeakerCard
+                    name={panelist.name}
+                    role={panelist.role}
+                    linkedinUrl={panelist.linkedinUrl}
+                    imageUrl={panelist.imageUrl}
+                    focusArea={panelist.focusArea}></SpeakerCard>
+                }
+              </React.Fragment>
+            ))}
+          </Box>
         </Box>
-        {/* Bottom Row (3 panelists) */}
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '20px',
-            flexWrap: 'wrap'
-          }}>
-          {panelists.slice(3, 6).map((panelist, index) => (
-            <React.Fragment key={index}>
-              {renderPanelistSquare(
-                panelist.name,
-                panelist.role,
-                panelist.linkedinUrl,
-                panelist.imageUrl,
-                panelist.focusArea
-              )}
-            </React.Fragment>
-          ))}
+      );
+    } else {
+      // for engineering (4 panelists so far)
+      return (
+        <Box sx={{ marginBottom: '40px' }}>
+          <Typography
+            variant="h5"
+            sx={{
+              textAlign: 'center',
+              color: '#fff',
+              fontFamily: 'Josefin Sans',
+              marginBottom: '20px'
+            }}>
+            {title}
+          </Typography>
+          {/* Top Row (3 panelists) */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '20px',
+              flexWrap: 'wrap',
+              marginBottom: '20px'
+            }}>
+            {panelists.slice(0, 2).map((panelist, index) => (
+              <React.Fragment key={index}>
+                {
+                  <SpeakerCard
+                    name={panelist.name}
+                    role={panelist.role}
+                    linkedinUrl={panelist.linkedinUrl}
+                    imageUrl={panelist.imageUrl}
+                    focusArea={panelist.focusArea}></SpeakerCard>
+                }
+              </React.Fragment>
+            ))}
+          </Box>
+          {/* Bottom Row (3 panelists) */}
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '20px',
+              flexWrap: 'wrap'
+            }}>
+            {panelists.slice(2, 5).map((panelist, index) => (
+              <React.Fragment key={index}>
+                {
+                  <SpeakerCard
+                    name={panelist.name}
+                    role={panelist.role}
+                    linkedinUrl={panelist.linkedinUrl}
+                    imageUrl={panelist.imageUrl}
+                    focusArea={panelist.focusArea}></SpeakerCard>
+                }
+              </React.Fragment>
+            ))}
+          </Box>
         </Box>
-      </Box>
-    );
+      );
+    }
   };
 
   // Mock data for panelists (replace with actual data)
