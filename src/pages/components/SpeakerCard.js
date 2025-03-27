@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
+import { Typography, Box, IconButton, useMediaQuery, useTheme, Divider } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedIn icon
 import { useInView } from 'react-intersection-observer'; // Import useInView hook
 
@@ -16,7 +16,7 @@ const SpeakerCard = ({ name, role, linkedinUrl, imageUrl, focusArea }) => {
       ref={ref}
       sx={{
         width: isMobile ? '80dvw' : '325px',
-        height: isMobile ? 'auto' : '350px',
+        height: isMobile ? 'auto' : '320px',
         backgroundColor: 'rgba(171, 165, 217, 0.2)', // Semi-transparent background
         borderRadius: '10px',
         padding: '20px',
@@ -26,8 +26,16 @@ const SpeakerCard = ({ name, role, linkedinUrl, imageUrl, focusArea }) => {
         textAlign: 'center', // Left-align the rest of the text
         opacity: inView ? 1 : 0,
         transform: inView ? 'translateY(0)' : 'translateY(20px)',
-        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out'
+        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
+        position: 'relative'
       }}>
+      <IconButton
+        href={linkedinUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{ color: '#0A66C2', position: 'absolute', top: '20px', right: '20px' }}>
+        <LinkedInIcon />
+      </IconButton>
       {/* Circular Picture */}
       <Box
         sx={{
@@ -55,24 +63,31 @@ const SpeakerCard = ({ name, role, linkedinUrl, imageUrl, focusArea }) => {
         <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#fff' }}>
           {name}
         </Typography>
-        <IconButton
-          href={linkedinUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{ color: '#0A66C2' }}>
-          <LinkedInIcon />
-        </IconButton>
       </Box>
       {/* Left-Aligned Text */}
-      <Typography variant="body1" sx={{ marginBottom: '10px', textAlign: 'center', color: '#fff' }}>
+      <Typography
+        variant="body2"
+        sx={{
+          marginTop: '-15px',
+          marginBottom: '10px',
+          textAlign: 'center',
+          color: '#DDDBF3'
+        }}>
         {role}
       </Typography>
+      <Divider sx={{ background: '#BBB7E1', width: '100%' }}></Divider>
       <Typography
         variant="body1"
-        sx={{ marginBottom: '10px', textAlign: 'center', fontWeight: 'bold', color: '#fff' }}>
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          textAlign: 'center',
+          fontWeight: 'bold',
+          color: '#DDDBF3'
+        }}>
         Key Focus Area/Research Interest:
       </Typography>
-      <Typography variant="body2" sx={{ textAlign: 'center', color: '#fff' }}>
+      <Typography variant="body2" sx={{ textAlign: 'center', color: '#DDDBF3' }}>
         {focusArea}
       </Typography>
     </Box>
