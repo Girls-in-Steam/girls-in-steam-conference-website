@@ -8,13 +8,30 @@ import mc from '../images/McElhanney.png';
 import SAC from '../images/SAC_FINAL-wordmark-colour.png';
 import cima from '../images/CIMA+_logo_slogan_EN_2024_VERTICAL.png';
 import donut from '../images/LD_BRAND_FULL_NODATE_FIN_LRG.png';
-import coastal from '../images/coastal.png';
+import oztrekk from '../images/oztrekk.jpeg';
+import luscan from '../images/luscan.jpg';
+import unclefatih from '../images/unclefatih.png';
+import vgb from '../images/vgb.png';
+import waltergage from '../images/waltergage.png';
 import './../styles/SupportUs.css';
 import SponsorPkg from './SponsorPkg';
 
 export default function Sponsors() {
   // Array of sponsor logos
-  const sponsorLogos = [mc, Yoggu, SAC, DangGood, smartSweet, cima, donut, coastal];
+  const sponsorLogos = [
+    mc,
+    Yoggu,
+    SAC,
+    DangGood,
+    smartSweet,
+    cima,
+    donut,
+    oztrekk,
+    luscan,
+    unclefatih,
+    vgb,
+    waltergage
+  ];
 
   // Function to render a single logo with scroll animation
   const renderLogo = (logo, index) => {
@@ -63,6 +80,9 @@ export default function Sponsors() {
               {/* Bottom Row: Next 4 Logos */}
               <div className="LogoRow">
                 {sponsorLogos.slice(4, 8).map((logo, index) => renderLogo(logo, index + 4))}
+              </div>
+              <div className="LogoRow">
+                {sponsorLogos.slice(8, 12).map((logo, index) => renderLogo(logo, index + 4))}
               </div>
             </div>
             {/* Centered SponsorPkg */}
