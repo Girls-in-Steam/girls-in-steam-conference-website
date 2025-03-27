@@ -217,7 +217,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            STEAM Workshops & Lunch @ various locations
+            STEAM Workshops & Lunch @ BUCH
           </Typography>
         </Box>
 
@@ -250,7 +250,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            Networking & Boothing Session
+            Networking & Boothing Session @ ESC
           </Typography>
         </Box>
 
@@ -283,7 +283,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            STEAM Panels @ various locations
+            STEAM Panels @ BUCH
           </Typography>
         </Box>
 

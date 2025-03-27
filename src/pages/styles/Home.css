@@ -47,17 +47,17 @@ html {
   min-height: 200px;
 }
 .KeyNote-Background {
-  background-image: linear-gradient(#6363ab, #5e5e7f);
+  background-image: linear-gradient(#6363ab, #55559d);
   min-height: 200px;
 }
 
 .Workshop-Background {
-  background-image: linear-gradient(#5e5e7f, #57579F, #564F7D);
+  background: #584d7a;
   min-height: 200px;
   padding: 5%;
 }
 .Panelist-Background {
-  background-image: linear-gradient(#564F7D, #6363AB);
+  background-image: linear-gradient(#4d4d8c, #6363ab);
   min-height: 200px;
   padding-top: 5%;
 }
