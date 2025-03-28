@@ -174,7 +174,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            10:00AM - 11:00AM
+            10:30AM - 11:00AM
           </Typography>
           <Typography
             variant="body1"
@@ -207,7 +207,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            11:00AM - 2:30PM
+            11:00AM - 12:00PM
           </Typography>
           <Typography
             variant="body1"
@@ -217,11 +217,44 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            STEAM Workshops & Lunch @ BUCH
+            STEAM Workshops Part 1 @ BUCHD
           </Typography>
         </Box>
 
         {/* Agenda Item 6 */}
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: { xs: 'flex-start', sm: 'center' },
+            gap: '10px',
+            flexDirection: { xs: 'column', sm: 'row' },
+            animation: 'slideIn 1s ease-out 1s', // Slide in with delay
+            animationFillMode: 'both'
+          }}>
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: 'bold',
+              color: '#BBB7E1',
+              minWidth: { xs: '100%', sm: '120px' },
+              fontSize: { xs: '1rem', sm: '1.25rem' },
+              textAlign: { xs: 'left', sm: 'right' }
+            }}>
+            12:00PM - 1:50PM
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#FFF',
+              textAlign: 'left',
+              fontSize: { xs: '0.9rem', sm: '1rem' },
+              marginLeft: { xs: '0', sm: '10px' }
+            }}>
+            Lunch, Networking & Boothing Session @ ESC
+          </Typography>
+        </Box>
+
+        {/* Agenda Item 7 */}
         <Box
           sx={{
             display: 'flex',
@@ -240,7 +273,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            2:30PM - 3:20PM
+            2:00PM - 3:00PM
           </Typography>
           <Typography
             variant="body1"
@@ -250,7 +283,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            Networking & Boothing Session @ ESC
+            STEAM Workshops Part 2 @ BUCHD
           </Typography>
         </Box>
 
@@ -273,7 +306,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            3:20PM - 4:20PM
+            3:15PM - 4:15PM
           </Typography>
           <Typography
             variant="body1"
@@ -283,7 +316,7 @@ export default function Agenda() {
               fontSize: { xs: '0.9rem', sm: '1rem' },
               marginLeft: { xs: '0', sm: '10px' }
             }}>
-            STEAM Panels @ BUCH
+            STEAM Panels @ BUCHD
           </Typography>
         </Box>
 
@@ -306,7 +339,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            4:20PM - 4:40PM
+            4:15PM - 4:30PM
           </Typography>
           <Typography
             variant="body1"
@@ -339,7 +372,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            4:40PM - 5:30PM
+            4:30PM - 5:15PM
           </Typography>
           <Typography
             variant="body1"
@@ -372,7 +405,7 @@ export default function Agenda() {
               fontSize: { xs: '1rem', sm: '1.25rem' },
               textAlign: { xs: 'left', sm: 'right' }
             }}>
-            5:30PM - 6:00PM
+            5:15PM - 5:30PM
           </Typography>
           <Typography
             variant="body1"
