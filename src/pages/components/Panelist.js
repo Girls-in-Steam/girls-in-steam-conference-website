@@ -20,6 +20,7 @@ import Layla from '../images/Layla.jpeg';
 import ArielleMurad from '../images/ArielleMurad.jpg';
 import TumiFabiyi from '../images/TumiFabiyi.jpg';
 import JessieRehwald from '../images/Jessie Rehwald.jpg';
+import Buse from '../images/busedemir.png';
 // arts
 import JulianneNieh from '../images/JulianneNieh.jpg';
 import BonnieLu from '../images/BonnieLu.jpeg';
@@ -32,6 +33,7 @@ import FaezehYazdi from '../images/FaezehYazdi.jpg';
 import TaraUbovic from '../images/TaraUbovic.jpg';
 import MacKenzieCarr from '../images/MacKenzieCarr.jpg';
 import Dia from '../images/Dia.jpeg';
+import Sheetal from '../images/sheetal.jpeg';
 
 export default function Panelists() {
   // Function to render a panel section
@@ -284,6 +286,14 @@ export default function Panelists() {
       imageUrl: JessieRehwald,
       focusArea:
         'Engineering, the environment, and urbanism, with a strong interest in how these fields intersect. '
+    },
+    {
+      name: 'Buse Demir (She/Her)',
+      role: 'Senior AI Engineer @ Microinstrumentation Laboratory + Founder @ BLUESENSE',
+      linkedinUrl: 'https://www.linkedin.com/in/buse-demir/',
+      imageUrl: Buse,
+      focusArea:
+        'Real-time Speech & NLP Processing, Digital Twins & 3D Avatars, AI for Dermatology & Health Diagnostics, Multimodal Machine Learning, Fairness & Accessibility in AI.'
     }
   ];
 
@@ -365,6 +375,14 @@ export default function Panelists() {
       linkedinUrl: 'https://www.linkedin.com/in/dia-zavery/?originalSubdomain=ca',
       imageUrl: Dia,
       focusArea: 'AI-driven automation, financial analytics, and market research'
+    },
+    {
+      name: 'Sheetal Shajan (She/Her)',
+      role: 'Data Scientist @ Seaspan',
+      linkedinUrl: 'https://www.linkedin.com/in/sheetal-shajan-a932a1164/',
+      imageUrl: Sheetal,
+      focusArea:
+        'Data Science, Data Visualization, Machine Learning and Statistical Modelling, Automation and Data Engineering, Natural Language Processing and LLMs, Machine Learning in Health care'
     }
   ];
 
