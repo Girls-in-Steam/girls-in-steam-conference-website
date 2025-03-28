@@ -1,4 +1,4 @@
-import React from 'react';
+mport React from 'react';
 import { Typography, Box, useMediaQuery, useTheme } from '@mui/material';
 import { useInView } from 'react-intersection-observer'; // Import useInView hook
 import SpeakerCard from './SpeakerCard';
@@ -156,11 +156,10 @@ export default function Workshop() {
         return { emoji: '', location: '' };
     }
   };
-
   return (
     <Box sx={{ padding: '40px 20px', borderRadius: '10px', color: '#FFF', minHeight: '100vh' }}>
       {/* ... (other components remain the same) */}
-
+      
       <Box sx={{ marginBottom: '40px' }}>
         {groupedWorkshops.map((group, groupIndex) => {
           const { emoji, location } = getWorkshopDetails(group[0].type);
@@ -205,8 +204,7 @@ export default function Workshop() {
                 </>
               )}
 
-              <Box
-                sx={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                 {group.map((workshop, index) => {
                   const { ref, inView } = useInView({
                     triggerOnce: true,
@@ -235,12 +233,7 @@ export default function Workshop() {
                             }}>
                             {index === 0 ? '11:00 AM - 12:00 PM' : '2:00 PM - 3:00 PM'}
                           </Typography>
-                          <Box
-                            sx={{
-                              height: isMobile ? 'auto' : '65px',
-                              display: 'flex',
-                              alignItems: 'center'
-                            }}>
+                          <Box sx={{ height: isMobile ? 'auto' : '65px', display: 'flex', alignItems: 'center' }}>
                             <Typography
                               variant="body1"
                               sx={{
@@ -272,3 +265,5 @@ export default function Workshop() {
     </Box>
   );
 }
+
+ 

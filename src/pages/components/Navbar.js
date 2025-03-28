@@ -137,7 +137,7 @@ export default function ButtonAppBar() {
                   fontSize: '1.2rem',
                   backgroundColor: 'transparent',
                   color: activeTab === tab ? 'white' : 'lightgrey',
-                  fontWeight: 700,
+                  fontWeight: 500,
                   '&:hover': { color: 'white', textDecoration: 'underline' }
                 }}>
                 {tab}
