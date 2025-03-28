@@ -157,8 +157,46 @@ export default function Workshop() {
     }
   };
   return (
-    <Box sx={{ padding: '40px 20px', borderRadius: '10px', color: '#FFF', minHeight: '100vh' }}>
-      {/* ... (other components remain the same) */}
+    <Box
+      sx={{
+        padding: '40px 20px',
+        borderRadius: '10px',
+        color: '#FFF',
+        minHeight: '100vh' // Ensure the gradient covers the entire page height
+      }}>
+      <Typography
+        variant="h3"
+        sx={{
+          textAlign: 'center',
+          color: '#E8C3D1',
+          fontFamily: 'Josefin Sans',
+          fontWeight: 'bold',
+          marginBottom: '40px'
+        }}>
+        STEAM WORKSHOPS
+      </Typography>
+      {/* Note Section */}
+      <Box
+        sx={{
+          maxWidth: '800px',
+          margin: '0 auto 40px auto', // Center and add margin below
+          padding: '20px',
+          backgroundColor: 'transparent', // Transparent background
+          borderRadius: '10px',
+          alignItems: 'center'
+        }}>
+        <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
+          • Attendees are encouraged to have lunch between workshops.
+        </Typography>
+        <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
+          • Each category (Science, Arts, Math, Technology, Engineering) has 2 workshops. Attendees
+          are welcome to attend any 2 workshops of their choice!
+        </Typography>
+        <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
+          • During lunch, attendees are encouraged to go to our career/networking fair with booths
+          from sponsors & partners which will be set up in Location TBD.
+        </Typography>
+      </Box>
 
       <Box sx={{ marginBottom: '40px' }}>
         {groupedWorkshops.map((group, groupIndex) => {
