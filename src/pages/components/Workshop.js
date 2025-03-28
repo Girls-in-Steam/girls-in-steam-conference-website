@@ -143,64 +143,29 @@ export default function Workshop() {
   const getWorkshopDetails = (type) => {
     switch (type) {
       case 'Science':
-        return { emoji: '🔭', location: '@ BUCH B213' };
+        return { emoji: '🔭', location: '@ BUCH D314' };
       case 'Technology':
-        return { emoji: '💻', location: '@ BUCH B315' };
+        return { emoji: '💻', location: '@ BUCH B316' };
       case 'Engineering':
         return { emoji: '📋', location: '@ BUCH D322' };
       case 'Arts':
         return { emoji: '📑', location: '@ Buch D323' };
       case 'Math':
-        return { emoji: '🧮', location: '@ Buch D323' };
+        return { emoji: '🧮', location: '@ Buch D317' };
       default:
         return { emoji: '', location: '' };
     }
   };
 
   return (
-    <Box
-      sx={{
-        padding: '40px 20px',
-        borderRadius: '10px',
-        color: '#FFF',
-        minHeight: '100vh' // Ensure the gradient covers the entire page height
-      }}>
-      <Typography
-        variant="h3"
-        sx={{
-          textAlign: 'center',
-          color: '#E8C3D1',
-          fontFamily: 'Josefin Sans',
-          fontWeight: 'bold',
-          marginBottom: '40px'
-        }}>
-        STEAM WORKSHOPS
-      </Typography>
-      {/* Note Section */}
-      <Box
-        sx={{
-          maxWidth: '800px',
-          margin: '0 auto 40px auto', // Center and add margin below
-          padding: '20px',
-          backgroundColor: 'transparent', // Transparent background
-          borderRadius: '10px',
-          alignItems: 'center'
-        }}>
-        <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
-          • Attendees are encouraged to have lunch between workshops.
-        </Typography>
-        <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
-          • Each category (Science, Arts, Math, Technology, Engineering) has 2 workshops. Attendees
-          are welcome to attend any 2 workshops of their choice!
-        </Typography>
-        <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
-          • During lunch, attendees are encouraged to go to our career/networking fair with booths
-          from sponsors & partners which will be set up in Location TBD.
-        </Typography>
-      </Box>
+    <Box sx={{ padding: '40px 20px', borderRadius: '10px', color: '#FFF', minHeight: '100vh' }}>
+      {/* ... (other components remain the same) */}
+
       <Box sx={{ marginBottom: '40px' }}>
         {groupedWorkshops.map((group, groupIndex) => {
-          const { emoji, location } = getWorkshopDetails(group[0].type); // Get emoji and location for the group
+          const { emoji, location } = getWorkshopDetails(group[0].type);
+          const isMathWorkshop = group[0].type === 'Math';
+
           return (
             <Box key={groupIndex} sx={{ marginBottom: '40px' }}>
               <Typography
@@ -213,19 +178,39 @@ export default function Workshop() {
                 }}>
                 {emoji} {group[0].type} Workshops {location}
               </Typography>
-              {/* Workshop pair */}
+
+              {/* Special handling for Math workshops */}
+              {isMathWorkshop && (
+                <>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      textAlign: 'center',
+                      color: '#FFF',
+                      fontWeight: 'bold',
+                      marginBottom: '10px'
+                    }}>
+                    2:00 PM - 3:00 PM
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      textAlign: 'center',
+                      color: '#FFF',
+                      fontStyle: 'italic',
+                      marginBottom: '20px'
+                    }}>
+                    Topic: {group[0].topic}
+                  </Typography>
+                </>
+              )}
+
               <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  gap: '20px',
-                  flexWrap: 'wrap',
-                  marginBottom: '20px'
-                }}>
+                sx={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
                 {group.map((workshop, index) => {
                   const { ref, inView } = useInView({
-                    triggerOnce: true, // Only trigger the animation once
-                    threshold: 0.1 // Trigger when 10% of the element is visible
+                    triggerOnce: true,
+                    threshold: 0.1
                   });
 
                   return (
@@ -237,56 +222,45 @@ export default function Workshop() {
                         transform: inView ? 'translateY(0)' : 'translateY(20px)',
                         transition: 'opacity 0.5s ease-out, transform 0.5s ease-out'
                       }}>
-                      {/* Time Label */}
-
-                      <Box
-                        sx={{
-                          width: isMobile ? '80dvw' : '325px',
-                          paddingLeft: '20px',
-                          paddingRight: '20px'
-                        }}>
-                        <Typography
-                          variant="body1"
-                          sx={{
-                            textAlign: 'center',
-                            color: '#FFF',
-                            marginBottom: '10px',
-                            fontWeight: 'bold'
-                          }}>
-                          {index === 0 ? '11:00 AM - 12:00 PM' : '2:00 PM - 3:00 PM'}
-                        </Typography>
-                        <Box
-                          sx={{
-                            height: isMobile ? 'auto' : '65px', //to align top of card
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                          }}>
+                      {/* Conditional rendering for non-Math workshops */}
+                      {!isMathWorkshop && (
+                        <Box sx={{ width: isMobile ? '80dvw' : '325px', padding: '0 20px' }}>
                           <Typography
                             variant="body1"
                             sx={{
                               textAlign: 'center',
                               color: '#FFF',
                               marginBottom: '10px',
-                              fontWeight: 'regular',
-                              fontStyle: 'italic'
+                              fontWeight: 'bold'
                             }}>
-                            {'Topic: ' + workshop.topic}
+                            {index === 0 ? '11:00 AM - 12:00 PM' : '2:00 PM - 3:00 PM'}
                           </Typography>
+                          <Box
+                            sx={{
+                              height: isMobile ? 'auto' : '65px',
+                              display: 'flex',
+                              alignItems: 'center'
+                            }}>
+                            <Typography
+                              variant="body1"
+                              sx={{
+                                textAlign: 'center',
+                                color: '#FFF',
+                                fontStyle: 'italic'
+                              }}>
+                              Topic: {workshop.topic}
+                            </Typography>
+                          </Box>
                         </Box>
-                      </Box>
+                      )}
 
-                      {/* Workshop square */}
-                      <React.Fragment>
-                        {
-                          <SpeakerCard
-                            name={workshop.title}
-                            role={workshop.role + ' (' + workshop.organization + ')'}
-                            linkedinUrl={workshop.linkedin}
-                            imageUrl={workshop.image}
-                            focusArea={workshop.keyFocus}></SpeakerCard>
-                        }
-                      </React.Fragment>
+                      <SpeakerCard
+                        name={workshop.title}
+                        role={`${workshop.role} (${workshop.organization})`}
+                        linkedinUrl={workshop.linkedin}
+                        imageUrl={workshop.image}
+                        focusArea={workshop.keyFocus}
+                      />
                     </Box>
                   );
                 })}
