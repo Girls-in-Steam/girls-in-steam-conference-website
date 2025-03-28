@@ -143,15 +143,15 @@ export default function Workshop() {
   const getWorkshopDetails = (type) => {
     switch (type) {
       case 'Science':
-        return { emoji: '🔭', location: '@ BUCH B213' };
+        return { emoji: '🔭', location: '@ BUCH D314' };
       case 'Technology':
-        return { emoji: '💻', location: '@ BUCH B315' };
+        return { emoji: '💻', location: '@ BUCH D316' };
       case 'Engineering':
         return { emoji: '📋', location: '@ BUCH D322' };
       case 'Arts':
         return { emoji: '📑', location: '@ Buch D323' };
       case 'Math':
-        return { emoji: '🧮', location: '@ Buch D323' };
+        return { emoji: '🧮', location: '@ Buch D317' };
       default:
         return { emoji: '', location: '' };
     }
@@ -253,7 +253,11 @@ export default function Workshop() {
                             marginBottom: '10px',
                             fontWeight: 'bold'
                           }}>
-                          {index === 0 ? '11:00 AM - 12:00 PM' : '2:00 PM - 3:00 PM'}
+                          {workshop.type === 'Math'
+                            ? '2:00 PM - 3:00 PM'
+                            : index === 0
+                              ? '11:00 AM - 12:00 PM'
+                              : '2:00 PM - 3:00 PM'}
                         </Typography>
                         <Box
                           sx={{

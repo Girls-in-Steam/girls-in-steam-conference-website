@@ -389,16 +389,16 @@ export default function Panelists() {
       </Typography>
 
       {/* Science Panel */}
-      {renderPanelSection('🔭 Science Panel @ BUCH A102', sciencePanelists)}
+      {renderPanelSection('🔭 Science Panel @ BUCH D314', sciencePanelists)}
 
       {/* Technology Panel */}
-      {renderPanelSection('💻 Technology Panel @ BUCH A103', technologyPanelists)}
+      {renderPanelSection('💻 Technology Panel @ BUCH D316', technologyPanelists)}
 
       {/* Engineering Panel */}
-      {renderPanelSection('📋 Engineering Panel @ BUCH A104', engineeringPanelists)}
+      {renderPanelSection('📋 Engineering Panel @ BUCH D322', engineeringPanelists)}
 
       {/* Arts Panel */}
-      {renderPanelSection('📑 Arts Panel @ BUCH B307', artsPanelists)}
+      {renderPanelSection('📑 Arts Panel @ BUCH B323', artsPanelists)}
 
       {/* Math Panel */}
       {renderPanelSection('📑 Math Panel @ BUCH D317', mathPanelists)}
