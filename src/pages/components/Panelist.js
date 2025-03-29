@@ -416,7 +416,7 @@ export default function Panelists() {
       {renderPanelSection('📋 Engineering Panel @ BUCH D322', engineeringPanelists)}
 
       {/* Arts Panel */}
-      {renderPanelSection('📑 Arts Panel @ BUCH B323', artsPanelists)}
+      {renderPanelSection('📑 Arts Panel @ BUCH D323', artsPanelists)}
 
       {/* Math Panel */}
       {renderPanelSection('📑 Math Panel @ BUCH D317', mathPanelists)}

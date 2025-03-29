@@ -145,13 +145,13 @@ export default function Workshop() {
       case 'Science':
         return { emoji: '🔭', location: '@ BUCH D314' };
       case 'Technology':
-        return { emoji: '💻', location: '@ BUCH B316' };
+        return { emoji: '💻', location: '@ BUCH D316' };
       case 'Engineering':
         return { emoji: '📋', location: '@ BUCH D322' };
       case 'Arts':
-        return { emoji: '📑', location: '@ Buch D323' };
+        return { emoji: '📑', location: '@ BUCH D323' };
       case 'Math':
-        return { emoji: '🧮', location: '@ Buch D317' };
+        return { emoji: '🧮', location: '@ BUCH D317' };
       default:
         return { emoji: '', location: '' };
     }
@@ -186,15 +186,16 @@ export default function Workshop() {
           alignItems: 'center'
         }}>
         <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
-          • Attendees are encouraged to have lunch between workshops.
+          • There are 2 workshops for each of Science, Technology, Engineering and Arts (11:00 AM -
+          12:00 PM, 2:00 PM - 3:00 PM). There is 1 Math workshop at 2:00 PM - 3:00 PM.
         </Typography>
         <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
-          • Each category (Science, Arts, Math, Technology, Engineering) has 2 workshops. Attendees
-          are welcome to attend any 2 workshops of their choice!
+          • Attendees are welcome to attend 1 11:00AM - 12:00PM and 1 2:00PM - 3:00PM workshop of
+          their choice!
         </Typography>
         <Typography variant="body1" sx={{ textAlign: 'left', color: '#FFF', marginBottom: '10px' }}>
           • During lunch, attendees are encouraged to go to our career/networking fair with booths
-          from sponsors & partners which will be set up in Location TBD.
+          from sponsors & partners which will be set up in the ESC.
         </Typography>
       </Box>
 
@@ -261,7 +262,11 @@ export default function Workshop() {
                       }}>
                       {/* Conditional rendering for non-Math workshops */}
                       {!isMathWorkshop && (
-                        <Box sx={{ width: isMobile ? '80dvw' : '325px', padding: '0 20px' }}>
+                        <Box
+                          sx={{
+                            width: isMobile ? '80dvw' : '325px',
+                            padding: '0 20px'
+                          }}>
                           <Typography
                             variant="body1"
                             sx={{
@@ -274,8 +279,10 @@ export default function Workshop() {
                           </Typography>
                           <Box
                             sx={{
-                              height: isMobile ? 'auto' : '65px',
+                              width: '100%',
+                              height: isMobile ? 'auto' : '70px',
                               display: 'flex',
+                              justifyContent: 'center',
                               alignItems: 'center'
                             }}>
                             <Typography
