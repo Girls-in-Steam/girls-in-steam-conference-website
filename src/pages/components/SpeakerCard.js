@@ -33,14 +33,14 @@ const SpeakerCard = ({ name, role, linkedinUrl, imageUrl, focusArea }) => {
         href={linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: '#0A66C2', position: 'absolute', top: '20px', right: '20px' }}>
+        sx={{ color: '#0A66C2', position: 'absolute', top: '15px', right: '15px' }}>
         <LinkedInIcon />
       </IconButton>
       {/* Circular Picture */}
       <Box
         sx={{
-          width: '100px',
-          height: '100px',
+          width: isMobile ? '45dvw' : '100px',
+          height: isMobile ? '45dvw' : '100px',
           borderRadius: '50%',
           backgroundColor: '#FFF', // Placeholder for the image
           marginBottom: '10px',
