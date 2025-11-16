@@ -43,7 +43,7 @@
 
 .gisConference {
   font-size: 30px;
-  color: #d0cdea;
+  color: #dad8eeff;
   text-align: center;
   margin: 0 0 10px; /* Add bottom margin to create space below */
 }
@@ -56,7 +56,7 @@
 .innovate {
   font-size: 70px;
   margin: 0; /* Remove any margin */
-  color: #d0cdea;
+  color: #dad8eeff; /* #d0cdea og
   text-shadow: rgba(0, 0, 0, 0.25) 15px 20px 8px;
   /* filter: drop-shadow(0 0 20px black); */
   position: relative;
